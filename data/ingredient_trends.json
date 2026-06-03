@@ -1,0 +1,524 @@
+{
+  "top_ingredients": [
+    {
+      "ingredient": "虾",
+      "total_gmv": 103981969.48,
+      "sku_count": 234,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "粮油调味",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 8
+    },
+    {
+      "ingredient": "牛肉",
+      "total_gmv": 98671437.37,
+      "sku_count": 185,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 7
+    },
+    {
+      "ingredient": "牛奶",
+      "total_gmv": 62016193.91,
+      "sku_count": 80,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "葡萄",
+      "total_gmv": 50553676.64,
+      "sku_count": 212,
+      "appears_in_cats": [
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "生鲜",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 6
+    },
+    {
+      "ingredient": "核桃",
+      "total_gmv": 50264582.73,
+      "sku_count": 184,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 5
+    },
+    {
+      "ingredient": "榴莲",
+      "total_gmv": 47791986.92,
+      "sku_count": 80,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "宠物生活",
+        "生鲜"
+      ],
+      "cross_cat_count": 4
+    },
+    {
+      "ingredient": "枸杞",
+      "total_gmv": 47429684.98,
+      "sku_count": 78,
+      "appears_in_cats": [
+        "传统滋补",
+        "保健食品/营养补充",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 4
+    },
+    {
+      "ingredient": "银耳",
+      "total_gmv": 41199058.33,
+      "sku_count": 37,
+      "appears_in_cats": [
+        "传统滋补",
+        "保健食品/营养补充",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 4
+    },
+    {
+      "ingredient": "猪肉",
+      "total_gmv": 36677645.04,
+      "sku_count": 73,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "生鲜",
+        "酒类"
+      ],
+      "cross_cat_count": 5
+    },
+    {
+      "ingredient": "芝麻",
+      "total_gmv": 36225362.9,
+      "sku_count": 101,
+      "appears_in_cats": [
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "生鲜",
+        "粮油调味",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 6
+    },
+    {
+      "ingredient": "花生",
+      "total_gmv": 35870085.71,
+      "sku_count": 115,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "生鲜",
+        "茗茶"
+      ],
+      "cross_cat_count": 5
+    },
+    {
+      "ingredient": "山药",
+      "total_gmv": 31162696.08,
+      "sku_count": 65,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "传统滋补",
+        "保健食品/营养补充",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 4
+    },
+    {
+      "ingredient": "鳕鱼",
+      "total_gmv": 22207366.25,
+      "sku_count": 41,
+      "appears_in_cats": [
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 6
+    },
+    {
+      "ingredient": "驼奶",
+      "total_gmv": 20882282.8,
+      "sku_count": 12,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "黑豆",
+      "total_gmv": 20702246.45,
+      "sku_count": 41,
+      "appears_in_cats": [
+        "传统滋补",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "羊肉",
+      "total_gmv": 20212230.4,
+      "sku_count": 8,
+      "appears_in_cats": [
+        "休闲食品",
+        "生鲜"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "铁棍山药",
+      "total_gmv": 19978462.45,
+      "sku_count": 37,
+      "appears_in_cats": [
+        "传统滋补",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "鸡肉",
+      "total_gmv": 19182552.37,
+      "sku_count": 271,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 7
+    },
+    {
+      "ingredient": "草莓",
+      "total_gmv": 16476533.3,
+      "sku_count": 33,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "酒类"
+      ],
+      "cross_cat_count": 6
+    },
+    {
+      "ingredient": "松露",
+      "total_gmv": 16182504.75,
+      "sku_count": 23,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "宠物生活",
+        "生鲜",
+        "粮油调味",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 7
+    },
+    {
+      "ingredient": "桂圆",
+      "total_gmv": 15804408.2,
+      "sku_count": 16,
+      "appears_in_cats": [
+        "传统滋补",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "莲子",
+      "total_gmv": 15129464.9,
+      "sku_count": 22,
+      "appears_in_cats": [
+        "传统滋补",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "蟹",
+      "total_gmv": 13992302.22,
+      "sku_count": 24,
+      "appears_in_cats": [
+        "休闲食品",
+        "宠物生活",
+        "生鲜",
+        "粮油调味",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 5
+    },
+    {
+      "ingredient": "竹荪",
+      "total_gmv": 13283529.4,
+      "sku_count": 17,
+      "appears_in_cats": [
+        "传统滋补",
+        "酒类"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "红枣",
+      "total_gmv": 13076725.8,
+      "sku_count": 38,
+      "appears_in_cats": [
+        "传统滋补",
+        "保健食品/营养补充",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 4
+    },
+    {
+      "ingredient": "三文鱼",
+      "total_gmv": 12674062.04,
+      "sku_count": 64,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 6
+    },
+    {
+      "ingredient": "蓝莓",
+      "total_gmv": 11137253.77,
+      "sku_count": 77,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 8
+    },
+    {
+      "ingredient": "百合",
+      "total_gmv": 10008501.54,
+      "sku_count": 40,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "传统滋补",
+        "保健食品/营养补充",
+        "茗茶",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 6
+    },
+    {
+      "ingredient": "鱼肉",
+      "total_gmv": 9192574.25,
+      "sku_count": 32,
+      "appears_in_cats": [
+        "休闲食品",
+        "传统滋补",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜",
+        "酒类",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 7
+    },
+    {
+      "ingredient": "木耳",
+      "total_gmv": 7842318.39,
+      "sku_count": 17,
+      "appears_in_cats": [
+        "传统滋补"
+      ],
+      "cross_cat_count": 1
+    },
+    {
+      "ingredient": "红豆",
+      "total_gmv": 7718451.2,
+      "sku_count": 27,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "传统滋补",
+        "生鲜",
+        "粮油调味",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 6
+    },
+    {
+      "ingredient": "薏米",
+      "total_gmv": 5738920.4,
+      "sku_count": 13,
+      "appears_in_cats": [
+        "传统滋补",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "带鱼",
+      "total_gmv": 4413647.06,
+      "sku_count": 12,
+      "appears_in_cats": [
+        "休闲食品",
+        "生鲜"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "羊肚菌",
+      "total_gmv": 4119659.9,
+      "sku_count": 6,
+      "appears_in_cats": [
+        "传统滋补"
+      ],
+      "cross_cat_count": 1
+    },
+    {
+      "ingredient": "椰奶",
+      "total_gmv": 3781677.0,
+      "sku_count": 4,
+      "appears_in_cats": [
+        "饮料冲调"
+      ],
+      "cross_cat_count": 1
+    },
+    {
+      "ingredient": "红薯",
+      "total_gmv": 3487645.89,
+      "sku_count": 16,
+      "appears_in_cats": [
+        "休闲食品",
+        "宠物生活",
+        "生鲜"
+      ],
+      "cross_cat_count": 3
+    },
+    {
+      "ingredient": "羊奶",
+      "total_gmv": 3112165.69,
+      "sku_count": 113,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "保健食品/营养补充",
+        "宠物生活",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 5
+    },
+    {
+      "ingredient": "绿豆",
+      "total_gmv": 2751930.1,
+      "sku_count": 9,
+      "appears_in_cats": [
+        "休闲食品",
+        "传统滋补",
+        "粮油调味",
+        "酒类"
+      ],
+      "cross_cat_count": 4
+    },
+    {
+      "ingredient": "鸭肉",
+      "total_gmv": 2629181.38,
+      "sku_count": 98,
+      "appears_in_cats": [
+        "乳品冷饮",
+        "休闲食品",
+        "保健食品/营养补充",
+        "宠物生活",
+        "生鲜"
+      ],
+      "cross_cat_count": 5
+    },
+    {
+      "ingredient": "樱桃",
+      "total_gmv": 1457323.0,
+      "sku_count": 13,
+      "appears_in_cats": [
+        "保健食品/营养补充",
+        "生鲜"
+      ],
+      "cross_cat_count": 2
+    },
+    {
+      "ingredient": "芒果",
+      "total_gmv": 1340676.3,
+      "sku_count": 10,
+      "appears_in_cats": [
+        "休闲食品",
+        "宠物生活",
+        "生鲜"
+      ],
+      "cross_cat_count": 3
+    },
+    {
+      "ingredient": "紫薯",
+      "total_gmv": 1269162.2,
+      "sku_count": 12,
+      "appears_in_cats": [
+        "休闲食品",
+        "传统滋补",
+        "宠物生活",
+        "饮料冲调"
+      ],
+      "cross_cat_count": 4
+    },
+    {
+      "ingredient": "桃胶",
+      "total_gmv": 142652.9,
+      "sku_count": 1,
+      "appears_in_cats": [
+        "饮料冲调"
+      ],
+      "cross_cat_count": 1
+    }
+  ]
+}

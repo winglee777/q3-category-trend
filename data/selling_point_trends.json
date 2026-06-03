@@ -1,0 +1,69 @@
+{
+  "top_selling_points": [
+    {
+      "selling_point": "冷链配送",
+      "total_gmv": 292476357.48,
+      "sku_count": 660
+    },
+    {
+      "selling_point": "即食方便",
+      "total_gmv": 285495614.26,
+      "sku_count": 475
+    },
+    {
+      "selling_point": "新鲜",
+      "total_gmv": 280531549.18,
+      "sku_count": 718
+    },
+    {
+      "selling_point": "有机无添加",
+      "total_gmv": 235611286.86,
+      "sku_count": 495
+    },
+    {
+      "selling_point": "地理标志",
+      "total_gmv": 226333181.66,
+      "sku_count": 535
+    },
+    {
+      "selling_point": "古法手工",
+      "total_gmv": 218514313.56,
+      "sku_count": 636
+    },
+    {
+      "selling_point": "进口",
+      "total_gmv": 161704577.77,
+      "sku_count": 296
+    },
+    {
+      "selling_point": "散养野生",
+      "total_gmv": 151253000.58,
+      "sku_count": 321
+    },
+    {
+      "selling_point": "顺丰包邮",
+      "total_gmv": 109649838.86,
+      "sku_count": 194
+    },
+    {
+      "selling_point": "产地直发",
+      "total_gmv": 108537210.78,
+      "sku_count": 355
+    },
+    {
+      "selling_point": "高蛋白低脂",
+      "total_gmv": 92849123.8,
+      "sku_count": 278
+    },
+    {
+      "selling_point": "联名IP",
+      "total_gmv": 34084718.62,
+      "sku_count": 78
+    },
+    {
+      "selling_point": "大牌平替",
+      "total_gmv": 28610885.42,
+      "sku_count": 73
+    }
+  ]
+}
