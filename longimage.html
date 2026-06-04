@@ -688,10 +688,65 @@ body{padding:0 0 60px}
 }
 .footer b{color:var(--primary);font-weight:700;font-style:italic;font-family:var(--serif)}
 
+/* ================== 02 · 分品类 TOP500 商品排行榜（Editorial 风） ================== */
+.filter-bar{background:var(--paper);border:1px solid var(--bd);border-radius:12px;padding:16px 20px;margin-bottom:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow);position:sticky;top:0;z-index:10}
+.filter-label{font-size:11px;font-weight:700;color:var(--sub);letter-spacing:.12em;text-transform:uppercase;font-family:var(--sans)}
+.cat-chips{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.chip{padding:6px 14px;border:1px solid var(--bd);border-radius:20px;font-size:12px;font-weight:600;background:var(--paper);cursor:pointer;transition:all .15s ease;color:var(--sub);user-select:none;font-family:var(--sans)}
+.chip:hover{border-color:var(--primary);color:var(--primary)}
+.chip.active{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:700}
+.chip .cnt{font-family:var(--serif);font-style:italic;font-size:10px;opacity:.65;margin-left:4px;font-weight:700}
+.search-box{flex-shrink:0;position:relative}
+.search-box input{width:220px;padding:8px 14px 8px 32px;border:1px solid var(--bd);border-radius:8px;font-size:12px;font-family:var(--sans);background:var(--paper-warm);outline:none;transition:border-color .15s;color:var(--ink)}
+.search-box input:focus{border-color:var(--primary);background:var(--paper)}
+.search-box::before{content:'🔍';position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:12px;opacity:.55}
+.sort-select{padding:8px 12px;border:1px solid var(--bd);border-radius:8px;font-size:12px;background:var(--paper-warm);font-family:var(--sans);cursor:pointer;color:var(--sub);font-weight:600}
+.sort-select:focus{outline:none;border-color:var(--primary)}
+.dm-tag{display:inline-block;padding:3px 9px;border-radius:99px;font-size:10.5px;font-weight:600;white-space:nowrap;letter-spacing:.02em}
+.dm-tag.dm-yes{background:var(--olive-soft);color:var(--olive);border:1px solid #a8c8bd}
+.dm-tag.dm-no{background:var(--primary-soft);color:var(--primary);border:1px solid #e8b9b3}
+.table-wrap{background:var(--paper);border:1px solid var(--bd);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.summary-bar{padding:12px 20px;background:var(--paper-warm);border-bottom:1px solid var(--bd);font-size:12px;color:var(--sub);display:flex;gap:18px;flex-wrap:wrap;font-family:var(--sans)}
+.summary-bar b{color:var(--ink);font-family:var(--serif);font-style:italic;font-weight:700}
+.rank-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+.rank-table thead th{background:var(--paper-warm);padding:12px 10px;text-align:left;font-weight:700;font-size:10.5px;color:var(--mute);border-bottom:1.5px solid var(--bd);letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans)}
+.rank-table tbody td{padding:10px 10px;border-bottom:1px solid var(--bd-light);vertical-align:middle;font-family:var(--sans)}
+.rank-table tbody tr:hover{background:var(--paper-warm)}
+.col-rank{width:50px;text-align:center;font-family:var(--serif);font-style:italic;font-weight:900;color:var(--mute);font-size:14px}
+.col-rank.top3{color:var(--primary)}
+.col-img{width:60px}
+.col-img img{width:48px;height:48px;object-fit:cover;border-radius:6px;background:var(--bd-light);border:1px solid var(--bd-light)}
+.col-name .pn{font-size:12px;color:var(--ink);font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.col-cat{width:130px}
+.cat-tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;letter-spacing:.02em}
+.cat-tag[data-cat="生鲜"]{background:var(--primary-soft);color:var(--primary)}
+.cat-tag[data-cat="休闲食品"]{background:var(--copper-soft);color:var(--copper)}
+.cat-tag[data-cat="传统滋补"]{background:var(--plum-soft);color:var(--plum)}
+.cat-tag[data-cat="饮料冲调"]{background:var(--indigo-soft);color:var(--indigo)}
+.cat-tag[data-cat="乳品冷饮"]{background:var(--olive-soft);color:var(--olive)}
+.cat-tag[data-cat="酒类"]{background:var(--plum-soft);color:var(--plum)}
+.cat-tag[data-cat="粮油调味"]{background:var(--olive-soft);color:var(--olive)}
+.cat-tag[data-cat="保健食品/营养补充"]{background:var(--indigo-soft);color:var(--indigo)}
+.cat-tag[data-cat="茗茶"]{background:var(--olive-soft);color:var(--olive)}
+.cat-tag[data-cat="宠物生活"]{background:var(--copper-soft);color:var(--copper)}
+.col-price{width:90px;font-size:11px;color:var(--sub);font-family:var(--serif);font-weight:600}
+.col-shop{width:140px;font-size:11px;color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.col-sales{width:80px;text-align:right;font-family:var(--serif);font-weight:700;color:var(--primary);font-size:13px;font-style:italic}
+.col-gmv{width:100px;text-align:right;font-family:var(--serif);font-weight:700;color:var(--ink);font-size:13px;font-style:italic}
+.col-live{width:80px;text-align:right;font-family:var(--serif);font-weight:600;color:var(--olive);font-size:12px;font-style:italic}
+.pager{padding:16px 20px;display:flex;justify-content:center;align-items:center;gap:10px;border-top:1px solid var(--bd);background:var(--paper-warm)}
+.pager button{padding:7px 14px;border:1px solid var(--bd);border-radius:6px;background:var(--paper);font-size:12px;cursor:pointer;font-family:var(--sans);font-weight:600;color:var(--sub);transition:all .15s}
+.pager button:hover:not(:disabled){border-color:var(--primary);color:var(--primary)}
+.pager button:disabled{opacity:.4;cursor:not-allowed}
+.pager .page-info{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink);font-weight:700;margin:0 12px}
+.empty-row{text-align:center;padding:50px;color:var(--mute);font-size:13px}
+
 /* 对外单图模式：仅展示营销地图 */
 body.map-only .hero,
 body.map-only .section-hd,
 body.map-only .insight-grid,
+body.map-only .filter-bar,
+body.map-only .table-wrap,
 body.map-only .footer{display:none !important}
 body.map-only .container{padding:24px}
 body.map-only{background:var(--bg)}
@@ -745,6 +800,43 @@ body.map-only{background:var(--bg)}
 </div>
 
 <div class="insight-grid" id="insight-grid"></div>
+
+<div class="section-hd" style="margin-top:48px">
+  <div class="num">02</div>
+  <div class="title">分品类商品排行榜</div>
+  <div class="desc">点击品类切换 · 支持搜索 / 多维排序 · 中长尾数据请联系 wingsdli</div>
+</div>
+
+<div class="filter-bar">
+  <span class="filter-label">品类</span>
+  <div class="cat-chips" id="cat-chips"></div>
+  <div class="search-box"><input type="text" id="search-input" placeholder="搜索商品名称 / 店铺…"></div>
+  <select class="sort-select" id="dm-select">
+    <option value="all">全域通 全部</option>
+    <option value="yes">🟢 已开通</option>
+    <option value="no">🔴 未开通</option>
+  </select>
+  <select class="sort-select" id="sort-select">
+    <option value="rank">综合排行</option>
+    <option value="sales">销量↓</option>
+    <option value="gmv">销售额↓</option>
+    <option value="live_sales">直播销量↓</option>
+  </select>
+</div>
+
+<div class="table-wrap">
+  <div class="summary-bar" id="summary-bar"></div>
+  <table class="rank-table">
+    <colgroup>
+      <col style="width:50px"><col style="width:60px"><col><col style="width:130px"><col style="width:100px"><col style="width:90px"><col style="width:140px"><col style="width:80px"><col style="width:100px"><col style="width:80px">
+    </colgroup>
+    <thead>
+      <tr><th>排行</th><th>主图</th><th>商品名称</th><th>品类</th><th>全域通</th><th>价格</th><th>来源店铺</th><th>销量</th><th>销售额</th><th>直播销量</th></tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <div class="pager" id="pager"></div>
+</div>
 
 </div>
 
@@ -973,6 +1065,114 @@ function renderInsights(){
   });
 }
 
+// ================== 02 · 分品类商品排行榜 ==================
+const tableState = { cat:'全部', search:'', sort:'rank', dm:'all', page:1, pageSize:50 };
+const fmt = n => n>=10000 ? (n/10000).toFixed(1)+'w' : (n||0).toLocaleString();
+const fmtMoneyShort = n => '¥'+(n>=10000 ? (n/10000).toFixed(1)+'w' : Math.round(n||0).toLocaleString());
+
+function renderChips(){
+  const wrap = document.getElementById('cat-chips');
+  if(!wrap) return;
+  // 按 GMV 降序排列品类
+  const sortedCats = [...CATS].sort((a,b)=>(STATS[b]?.total_gmv||0)-(STATS[a]?.total_gmv||0));
+  const all = ['全部', ...sortedCats];
+  wrap.innerHTML = all.map(c=>{
+    const cnt = c==='全部' ? RECORDS.length : RECORDS.filter(r=>r.cat===c).length;
+    return `<div class="chip ${tableState.cat===c?'active':''}" data-cat="${c}">${c}<span class="cnt">${cnt}</span></div>`;
+  }).join('');
+  wrap.querySelectorAll('.chip').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      tableState.cat = el.dataset.cat;
+      tableState.page = 1;
+      renderChips();
+      renderTable();
+    });
+  });
+}
+
+function getFiltered(){
+  let rows = RECORDS;
+  if(tableState.cat!=='全部') rows = rows.filter(r=>r.cat===tableState.cat);
+  if(tableState.search){
+    const q = tableState.search.toLowerCase();
+    rows = rows.filter(r=>(r.name||'').toLowerCase().includes(q) || (r.shop||'').toLowerCase().includes(q));
+  }
+  if(tableState.dm==='yes') rows = rows.filter(r=>r.in_dm==='是');
+  else if(tableState.dm==='no') rows = rows.filter(r=>r.in_dm!=='是');
+  const key = tableState.sort;
+  if(key==='rank') rows = [...rows].sort((a,b)=>(a.rank||9999)-(b.rank||9999));
+  else rows = [...rows].sort((a,b)=>(b[key]||0)-(a[key]||0));
+  return rows;
+}
+
+function renderSummary(filtered){
+  const bar = document.getElementById('summary-bar');
+  if(!bar) return;
+  const totalGmv = filtered.reduce((a,r)=>a+(r.gmv||0), 0);
+  const totalSales = filtered.reduce((a,r)=>a+(r.sales||0), 0);
+  const dmYes = filtered.filter(r=>r.in_dm==='是').length;
+  const dmRate = filtered.length ? ((dmYes/filtered.length)*100).toFixed(1) : 0;
+  bar.innerHTML = `
+    <span>当前筛选：<b>${filtered.length}</b> 件商品</span>
+    <span>合计销售额：<b>${fmtMoneyShort(totalGmv)}</b></span>
+    <span>合计销量：<b>${fmt(totalSales)}</b></span>
+    <span>全域通渗透：<b>${dmRate}%</b>（${dmYes}/${filtered.length}）</span>
+  `;
+}
+
+function renderTable(){
+  const filtered = getFiltered();
+  renderSummary(filtered);
+  const total = filtered.length;
+  const totalPages = Math.max(1, Math.ceil(total / tableState.pageSize));
+  if(tableState.page > totalPages) tableState.page = totalPages;
+  const start = (tableState.page-1) * tableState.pageSize;
+  const pageRows = filtered.slice(start, start + tableState.pageSize);
+  const tbody = document.getElementById('tbody');
+  if(pageRows.length===0){
+    tbody.innerHTML = '<tr><td colspan="10" class="empty-row">暂无数据，调整筛选条件试试 ~</td></tr>';
+  } else {
+    tbody.innerHTML = pageRows.map((r, i)=>{
+      const globalIdx = start + i + 1;
+      const top3Cls = globalIdx<=3 ? ' top3' : '';
+      return `
+      <tr>
+        <td class="col-rank${top3Cls}">${globalIdx}</td>
+        <td class="col-img">${r.img ? `<img src="${r.img}" loading="lazy" onerror="this.style.opacity=0.2">` : '<div style="width:48px;height:48px;background:var(--bd-light);border-radius:6px"></div>'}</td>
+        <td class="col-name"><div class="pn" title="${(r.name||'').replace(/"/g,'&quot;')}">${r.name||''}</div></td>
+        <td class="col-cat"><span class="cat-tag" data-cat="${r.cat}">${r.cat||'—'}</span></td>
+        <td class="col-dm">${r.in_dm==='是' ? '<span class="dm-tag dm-yes">🟢 已开通</span>' : '<span class="dm-tag dm-no">🔴 未开通</span>'}</td>
+        <td class="col-price">${r.price||'—'}</td>
+        <td class="col-shop" title="${r.shop||''}">${r.shop||'—'}</td>
+        <td class="col-sales">${(r.sales||0).toLocaleString()}</td>
+        <td class="col-gmv">${fmtMoneyShort(r.gmv||0)}</td>
+        <td class="col-live">${r.live_sales ? r.live_sales.toLocaleString() : '—'}</td>
+      </tr>
+    `;}).join('');
+  }
+  const pager = document.getElementById('pager');
+  pager.innerHTML = `
+    <button id="prev" ${tableState.page<=1?'disabled':''}>← 上一页</button>
+    <span class="page-info">第 ${tableState.page} / ${totalPages} 页（共 ${total.toLocaleString()} 条 · 每页 ${tableState.pageSize}）</span>
+    <button id="next" ${tableState.page>=totalPages?'disabled':''}>下一页 →</button>
+  `;
+  document.getElementById('prev').onclick = ()=>{
+    if(tableState.page>1){ tableState.page--; renderTable(); window.scrollTo({top:document.querySelector('.filter-bar').offsetTop-20, behavior:'smooth'}); }
+  };
+  document.getElementById('next').onclick = ()=>{
+    if(tableState.page<totalPages){ tableState.page++; renderTable(); window.scrollTo({top:document.querySelector('.filter-bar').offsetTop-20, behavior:'smooth'}); }
+  };
+}
+
+function bindRankingControls(){
+  const si = document.getElementById('search-input');
+  const ss = document.getElementById('sort-select');
+  const ds = document.getElementById('dm-select');
+  if(si) si.addEventListener('input', e=>{ tableState.search = e.target.value.trim(); tableState.page = 1; renderTable(); });
+  if(ss) ss.addEventListener('change', e=>{ tableState.sort = e.target.value; tableState.page = 1; renderTable(); });
+  if(ds) ds.addEventListener('change', e=>{ tableState.dm = e.target.value; tableState.page = 1; renderTable(); });
+}
+
 // 支持 ?map=1 仅渲染营销地图（对外单图模式）
 const MAP_ONLY = new URLSearchParams(location.search).get('map') === '1';
 if(MAP_ONLY){
@@ -981,7 +1181,12 @@ if(MAP_ONLY){
 
 loadData().then(() => {
   renderOverall();
-  if(!MAP_ONLY) renderInsights();
+  if(!MAP_ONLY){
+    renderInsights();
+    renderChips();
+    renderTable();
+    bindRankingControls();
+  }
   document.body.dataset.ready = '1';
 }).catch(err => {
   document.body.innerHTML = '<div style="padding:60px;text-align:center;color:#B5341C;font-size:16px">数据加载失败：' + err.message + '</div>';
