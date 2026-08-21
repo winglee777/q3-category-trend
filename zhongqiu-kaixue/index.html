@@ -548,6 +548,34 @@ html, body {
   .rk-tbl thead th.th-brand, .rk-tbl tbody td.td-brand { display:none; }
 }
 
+/* ============ v11 fix: 底部 SPU 榜单区跑出 .page 容器 → 强制居中+限宽 ============
+   页面第 1178 行开始，.section-title/rk-stat-bar/rk-card/rk-pager 都在 .page 外，
+   不受 max-width:1280px 约束。这里统一给它们套上跟 .page 一致的约束。 */
+.sheet > .section-title,
+.sheet > .rk-stat-bar,
+.sheet > .rk-card,
+.sheet > .rk-pager,
+.sheet > .footer {
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  box-sizing: border-box !important;
+}
+.sheet > .rk-card {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+/* 让表格文字更大一档 */
+.rk-tbl { font-size: 13px !important; }
+.rk-tbl thead th { font-size: 12px !important; padding: 12px 12px !important; }
+.rk-tbl tbody td { padding: 10px 12px !important; font-size: 12.5px !important; }
+.rk-tbl tbody td.td-brand,
+.rk-tbl tbody td.td-cat { font-size: 12.5px !important; }
+/* SPU 名字不换行 → 允许换 2 行 */
+.rk-tbl tbody td.td-spu { white-space: normal !important; word-break: break-all; }
+
 /* ============ v7 金秋季金色主题（sheet-zq / body.theme-zq）============ */
 body.theme-zq {
   --rk-primary: #c9a227 !important;         /* 金主色 */
