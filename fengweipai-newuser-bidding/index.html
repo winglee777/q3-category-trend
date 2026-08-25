@@ -1047,9 +1047,8 @@ h1, h2, h3, h4 {
 
     <!-- 中间桥：核心公式 -->
     <div class="ltv-bridge">
-      <b>核心公式 · 每个新客的期望复购价值：</b>
+      <b>核心公式 · 每个新客期望复购价值：</b>
       <span class="formula-line">28% × 2.5 × 135.5 = <span class="highlight-box">94.85 元/新客</span></span>
-      <span class="bridge-note">（分母：所有新客；已把"72% 不复购者拉低平均"这一漏斗计算在内）</span>
     </div>
 
     <!-- 第二层：两口径推演 -->
@@ -1073,7 +1072,7 @@ h1, h2, h3, h4 {
           </div>
           <div class="fc-result">
             <span class="fc-arrow">→</span>
-            <span class="fc-num">67<small>元</small></span>
+            <span class="fc-num">64<small>元</small></span>
             <span class="fc-cap">全年 ROI ≥ 3 出价上限</span>
           </div>
         </div>
@@ -1092,7 +1091,7 @@ h1, h2, h3, h4 {
           </div>
           <div class="fc-result">
             <span class="fc-arrow">→</span>
-            <span class="fc-num">81<small>元</small></span>
+            <span class="fc-num">77<small>元</small></span>
             <span class="fc-cap">全年 ROI ≥ 3 出价上限</span>
           </div>
         </div>
@@ -1273,6 +1272,106 @@ h1, h2, h3, h4 {
 #export-btn:hover { transform: translateY(-2px); background: #1a1208; }
 #export-btn:disabled { opacity: 0.6; cursor: wait; }
 @media print { #export-btn { display: none !important; } }
+
+/* ============================================================
+   v13 · A4 横版精简（1050px 舞台 / 字号 -1 档 / 去冗余）
+   ============================================================ */
+@page { size: A4 landscape; margin: 8mm; }
+
+.snapshot {
+  max-width: 1050px !important;
+  margin: 12px auto !important;
+}
+body { font-size: 12.5px; }
+
+/* 顶栏 */
+.brand-bar { padding: 18px 32px 14px !important; }
+.brand-bar h1 { font-size: 22px !important; letter-spacing: .3px !important; }
+.brand-bar .brand-meta { font-size: 11px !important; }
+
+/* 区块 padding 收紧 */
+.section { padding: 18px 32px !important; }
+.section-title h2 { font-size: 16px !important; }
+.section-title .ord { width: 22px; height: 22px; font-size: 11px !important; }
+.section-sub { font-size: 12px !important; padding-left: 32px !important; margin-bottom: 12px !important; }
+
+/* KPI 略缩 */
+.compare-headline { font-size: 20px !important; margin: 4px 0 8px !important; }
+.compare-sub, .compare-note { font-size: 11.5px !important; }
+.compare-bullets li { font-size: 11px !important; padding: 2px 0 !important; }
+.compare-card { padding: 4px 16px !important; }
+
+/* 6 月新客盘的进度条 */
+.bar-track { height: 30px !important; }
+.bar-fill { font-size: 12.5px !important; padding: 0 12px !important; }
+.source-label { font-size: 12.5px !important; }
+
+/* 双卡数字 */
+.detail-card { padding: 14px 18px !important; }
+.detail-card .card-title { font-size: 14px !important; margin-bottom: 10px !important; }
+.detail-card .tri .cell .num { font-size: 26px !important; }
+.detail-card .tri .cell .lbl { font-size: 10.5px !important; margin-top: 4px !important; }
+
+/* 复购卡 · 一行三列紧凑 */
+.repurchase { padding: 16px 22px !important; }
+.repurchase .rp-cap { font-size: 11px !important; margin-bottom: 10px !important; }
+.repurchase .rp-cell .lbl { font-size: 11px !important; margin-bottom: 6px !important; }
+.repurchase .rp-cell .big-num { font-size: 40px !important; }
+.repurchase .rp-cell.gap .sub { font-size: 10.5px !important; margin-top: 6px !important; }
+.repurchase .rp-badge { font-size: 10.5px !important; padding: 4px 10px !important; margin-top: 8px !important; }
+.repurchase .rp-divider { height: 60px !important; }
+
+/* 三层推演 */
+.ltv-layer { margin-top: 14px !important; }
+.layer-title { font-size: 12px !important; margin-bottom: 10px !important; padding-bottom: 6px !important; }
+.layer-tag { font-size: 11px !important; padding: 2px 8px !important; }
+
+/* 数据层 3 张小卡 */
+.ltv-card { padding: 12px 12px !important; }
+.ltv-card .num { font-size: 24px !important; }
+.ltv-card .num small { font-size: 12px !important; }
+.ltv-card .lbl { font-size: 11px !important; margin-top: 4px !important; }
+.ltv-card .meta { font-size: 10px !important; margin-top: 2px !important; line-height: 1.35 !important; }
+.ltv-card .step-tag { font-size: 9px !important; padding: 1px 6px !important; top: -8px !important; }
+
+/* 中间公式桥 */
+.ltv-bridge { padding: 10px 16px !important; margin: 12px 0 !important; font-size: 12px !important; }
+.ltv-bridge .formula-line { font-size: 13px !important; }
+.ltv-bridge .highlight-box { font-size: 13px !important; padding: 2px 8px !important; }
+.ltv-bridge .bridge-note { font-size: 10.5px !important; }
+
+/* 两口径卡 · 精简：删除 fc-note 冗余说明 */
+.dual-formula { gap: 12px !important; }
+.formula-card { padding: 14px 16px !important; }
+.fc-head { padding-bottom: 8px !important; margin-bottom: 8px !important; }
+.fc-tag { font-size: 12.5px !important; }
+.fc-sub { font-size: 10.5px !important; }
+.fc-body { margin-bottom: 10px !important; }
+.fc-line { font-size: 10.5px !important; margin-bottom: 4px !important; }
+.fc-formula { font-size: 13px !important; padding: 6px 10px !important; }
+.fc-note { display: none !important; }  /* v13 · 隐藏冗余说明，已在 fc-line 讲清 */
+.fc-result { padding-top: 8px !important; gap: 6px !important; }
+.fc-num { font-size: 28px !important; }
+.fc-num small { font-size: 14px !important; }
+.fc-cap { font-size: 10.5px !important; }
+
+/* 结论层 */
+.conclusion-layer { padding: 12px 16px !important; }
+.conc-item { padding: 10px 14px !important; gap: 8px !important; }
+.ci-cur { font-size: 11.5px !important; }
+.ci-new { font-size: 20px !important; }
+.ci-new small { font-size: 11px !important; }
+.ci-tag { font-size: 10.5px !important; padding: 2px 8px !important; }
+
+/* 页脚 */
+.page-footer { padding: 12px 32px !important; font-size: 11px !important; }
+
+/* 打印时把 hover/交互外框都去掉，并允许 section 内容跨列 */
+@media print {
+  body { background: #fff !important; margin: 0 !important; }
+  .snapshot { box-shadow: none !important; margin: 0 !important; max-width: none !important; }
+  .section { padding: 12px 20px !important; page-break-inside: avoid; }
+}
 </style>
 </body>
 </html>
