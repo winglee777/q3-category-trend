@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="brown">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>锋味派 · 2026年6月新客数据与出价建议</title>
+<style>
+/* ============================================================
+   5 套主题色（保留主题切换能力，色值全由 CSS 变量驱动）
+   用户锁定「棕金品质」为默认，可在右上角切换
+   ============================================================ */
+:root[data-theme="blue"] {
+  --primary: #1E40AF;  --primary-light: #2563EB;  --primary-bg: #EFF6FF;
+  --accent: #DC2626;   --accent-bg: #FEF2F2;
+  --success: #16A34A;  --gold: #F59E0B;
+  --text-primary: #1E293B; --text-secondary: #475569; --text-muted: #94A3B8;
+  --bg-page: #F0F4F8;  --bg-card: #FFFFFF;        --border: #E2E8F0;
+  --ad-blue: #1f4ea1;  --ad-blue-bg: #e7eef9;
+}
+:root[data-theme="brown"] {
+  --primary: #5a3f1f;          /* 深棕：顶栏/强调 */
+  --primary-light: #8a6a3a;
+  --primary-bg: #FAF5E6;
+  --accent: #d97a1f;            /* 橙：建议/出价/关键数字 */
+  --accent-bg: #fff4e6;
+  --success: #2f7a3f;           /* 绿：自然流 */
+  --success-bg: #e8f3eb;
+  --gold: #b08a3e;
+  --ad-blue: #1f4ea1;           /* 蓝：广告流 */
+  --ad-blue-bg: #e7eef9;
+  --text-primary: #2b2118;      /* 深棕底栏/文字 */
+  --text-secondary: #5b4632;
+  --text-muted: #8a7764;
+  --bg-page: #faf6ee;           /* 米白底 */
+  --bg-card: #fffefa;
+  --border: #e4d6b8;
+  --red: #c0392b;               /* 红：警示/反共识 */
+}
+:root[data-theme="green"] {
+  --primary: #166534;  --primary-light: #16A34A;  --primary-bg: #F0FDF4;
+  --accent: #C2410C;   --accent-bg: #FFF7ED;
+  --success: #15803D;  --gold: #CA8A04;
+  --text-primary: #14532D; --text-secondary: #365314; --text-muted: #84A98C;
+  --bg-page: #F1F8F4;  --bg-card: #FFFFFF;        --border: #D1E7DD;
+  --ad-blue: #1f4ea1;  --ad-blue-bg: #e7eef9;
+}
+:root[data-theme="red"] {
+  --primary: #DC2626;  --primary-light: #EF4444;  --primary-bg: #FEF2F2;
+  --accent: #B45309;   --accent-bg: #FFFBEB;
+  --success: #15803D;  --gold: #FBBF24;
+  --text-primary: #7F1D1D; --text-secondary: #991B1B; --text-muted: #B91C1C;
+  --bg-page: #FFF5F5;  --bg-card: #FFFFFF;        --border: #FECACA;
+  --ad-blue: #1f4ea1;  --ad-blue-bg: #e7eef9;
+}
+:root[data-theme="purple"] {
+  --primary: #7C3AED;  --primary-light: #A855F7;  --primary-bg: #F5F3FF;
+  --accent: #DB2777;   --accent-bg: #FDF2F8;
+  --success: #059669;  --gold: #F59E0B;
+  --text-primary: #1E1B4B; --text-secondary: #4338CA; --text-muted: #818CF8;
+  --bg-page: #F8FAFF;  --bg-card: #FFFFFF;        --border: #DDD6FE;
+  --ad-blue: #1f4ea1;  --ad-blue-bg: #e7eef9;
+}
+
+/* ============================================================
+   基础样式
+   ============================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg-page); }
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont,
+               'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC',
+               'Songti SC', 'STSong', serif;
+  color: var(--text-primary);
+}
+.num {
+  font-family: 'DIN', 'Bebas Neue', 'Roboto Condensed',
+               -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: 'tnum';
+}
+
+/* ============================================================
+   容器与可编辑
+   ============================================================ */
+.snapshot {
+  max-width: 1200px;
+  margin: 24px auto;
+  background: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(60,40,20,0.10);
+  overflow: hidden;
+}
+.snapshot[contenteditable="true"]:focus { outline: none; }
+.snapshot[contenteditable="true"] *:hover {
+  outline: 1px dashed rgba(90,63,31,0.20);
+  outline-offset: 2px;
+}
+@media print {
+  .snapshot[contenteditable="true"] *:hover { outline: none; }
+}
+
+/* ============================================================
+   品牌顶栏（深棕）
+   ============================================================ */
+.brand-bar {
+  background: var(--primary);
+  color: #fffefa;
+  padding: 28px 40px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  border-bottom: 4px solid var(--accent);
+}
+.brand-bar h1 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fffefa;
+}
+.brand-bar .brand-meta {
+  font-size: 13px;
+  opacity: 0.8;
+  text-align: right;
+  font-family: 'Noto Sans SC', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   通用工具
+   ============================================================ */
+.section { padding: 28px 40px; border-bottom: 1px solid var(--border); }
+.section:last-of-type { border-bottom: none; }
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.section-title h2 {
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+.section-title .ord {
+  display: inline-flex;
+  width: 26px; height: 26px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: 'DIN', 'Bebas Neue', sans-serif;
+}
+.section-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  padding-left: 38px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--primary-bg);
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+.tag-red   { background: #fdecea; color: var(--red); }
+.tag-blue  { background: var(--ad-blue-bg); color: var(--ad-blue); }
+.tag-green { background: var(--success-bg); color: var(--success); }
+.tag-orange{ background: var(--accent-bg); color: var(--accent); }
+
+/* 左侧细色条 */
+.bar-stripe {
+  border-left: 4px solid var(--color, var(--accent));
+  padding-left: 16px;
+}
+.stripe-blue   { --color: var(--ad-blue); }
+.stripe-green  { --color: var(--success); }
+.stripe-orange { --color: var(--accent); }
+.stripe-red    { --color: var(--red); }
+
+/* ============================================================
+   区块 1 · 大盘 vs 锋味派对比
+   ============================================================ */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+.compare-divider {
+  background: var(--border);
+  width: 1px;
+}
+.compare-card {
+  padding: 4px 22px;
+}
+.compare-card.left  { padding-left: 0; }
+.compare-card.right { padding-right: 0; }
+.compare-card .tag { margin-bottom: 12px; }
+.compare-headline {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 6px 0 12px;
+  color: var(--text-primary);
+}
+.compare-headline .hl-red    { color: var(--red);    }
+.compare-headline .hl-orange { color: var(--accent); }
+.compare-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.compare-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+.compare-bullets {
+  list-style: none;
+  padding: 8px 0 0;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+.compare-bullets li { padding: 3px 0; }
+.compare-bullets li b { color: var(--text-primary); font-weight: 700; }
+
+/* ============================================================
+   区块 2 · 来源拆分：双进度条
+   ============================================================ */
+.source-split {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px 20px;
+  align-items: center;
+  margin-top: 6px;
+}
+.source-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+.bar-track {
+  position: relative;
+  height: 36px;
+  background: rgba(0,0,0,0.04);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.bar-fill.ad   { background: var(--ad-blue); width: 52.6%; }
+.bar-fill.nat  { background: var(--success);   width: 47.4%; }
+.source-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+.source-note b { color: var(--accent); font-weight: 800; font-size: 14px; }
+
+/* ============================================================
+   区块 3 · 双卡 广告 vs 自然
+   ============================================================ */
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.detail-card {
+  border: 2px solid var(--c);
+  border-radius: 10px;
+  padding: 20px 24px;
+  background: var(--cbg);
+}
+.detail-card.ad  { --c: var(--ad-blue);  --cbg: var(--ad-blue-bg); }
+.detail-card.nat { --c: var(--success);  --cbg: var(--success-bg); }
+.detail-card .card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--c);
+  letter-spacing: 0.5px;
+}
+.detail-card .tri {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: end;
+}
+.detail-card .tri .cell .num {
+  display: block;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+.detail-card .tri .cell .lbl {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   区块 4 · 出价提升推导链（5 步 / 橙边）
+   ============================================================ */
+.ltv {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1.2fr;
+  gap: 8px;
+  align-items: stretch;
+}
+.ltv-card {
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px 14px;
+  text-align: center;
+  position: relative;
+}
+.ltv-card.derive { border-style: dashed; border-color: var(--accent); background: #fff8f0; }
+.ltv-card.final {
+  border-width: 3px;
+  background: linear-gradient(135deg, #fff 0%, #fff4e6 100%);
+  box-shadow: 0 6px 20px rgba(217, 122, 31, 0.2);
+}
+.ltv-card .step-tag {
+  position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #fff;
+  font-size: 10px; font-weight: 800; padding: 2px 8px;
+  border-radius: 10px; letter-spacing: 0.5px; white-space: nowrap;
+}
+.ltv-card.derive .step-tag { background: #b35f0e; }
+.ltv-card.final .step-tag { background: #b35f0e; }
+.ltv-card .num {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.ltv-card .num small { font-size: 15px; font-weight: 700; }
+.ltv-card.final .num { font-size: 34px; color: #b35f0e; }
+.ltv-card .lbl {
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-top: 6px;
+}
+.ltv-card .meta {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  line-height: 1.4;
+}
+.ltv-arrow {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+}
+.ltv-arrow.plus { font-size: 24px; }
+.ltv-formula {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #fff4e6;
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-family: 'DIN', 'Bebas Neue', sans-serif, 'Noto Sans SC';
+  letter-spacing: 0.2px;
+}
+.ltv-formula b { color: var(--accent); font-weight: 800; }
+.ltv-formula .highlight-box {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  padding: 2px 8px; border-radius: 4px; font-weight: 800;
+  margin: 0 2px;
+}
+
+/* ============================================================
+   区块 5 · 复购率对比深蓝卡
+   ============================================================ */
+.repurchase {
+  background: var(--ad-blue);
+  color: #fff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  position: relative;
+}
+.repurchase .rp-cap {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.75;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.repurchase .rp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1.1fr;
+  align-items: center;
+  gap: 12px;
+}
+.repurchase .rp-cell { text-align: center; padding: 0 14px; }
+.repurchase .rp-cell .lbl {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.repurchase .rp-cell .big-num {
+  font-family: 'DIN', 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #fff;
+}
+.repurchase .rp-cell .big-num.orange { color: #ffb258; }
+.repurchase .rp-cell .big-num.gray   { color: rgba(255,255,255,0.55); }
+.repurchase .rp-divider {
+  background: rgba(255,255,255,0.18);
+  width: 1px;
+  height: 80px;
+}
+.repurchase .rp-cell.gap .big-num { color: #ffb258; }
+.repurchase .rp-cell.gap .sub {
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+.repurchase .rp-badge {
+  display: inline-block;
+  background: #b08a3e;
+  color: #2b2118;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-top: 12px;
+  letter-spacing: 1px;
+}
+
+/* ============================================================
+   区块 6 · 出价建议表
+   ============================================================ */
+.price-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13.5px;
+}
+.price-table thead th {
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--border);
+}
+.price-table thead th:first-child { border-top-left-radius: 6px; }
+.price-table thead th:last-child  { border-top-right-radius: 6px; }
+.price-table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  color: var(--text-secondary);
+}
+.price-table tr:last-child td { border-bottom: none; }
+.price-table .kind-current {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--primary-bg);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 6px;
+}
+.price-table .kind-suggest {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 6px;
+}
+.price-table .num-cell .num {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.price-table .num-cell .num-gray {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+.price-table .num-cell .sub {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.price-table tr.suggest-row td { background: rgba(217,122,31,0.05); }
+.price-table .pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.price-table .pill.warn { background: var(--accent-bg); color: var(--accent); }
+.price-table .pill.good { background: #e8f3eb;       color: var(--success); }
+
+/* ============================================================
+   区块 7 · 执行建议双卡
+   ============================================================ */
+.action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.action-card {
+  border-radius: 10px;
+  padding: 22px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.action-card.immediate {
+  background: var(--accent);
+  color: #fff;
+}
+.action-card.immediate .act-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.action-card.immediate .act-sub {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+.action-card.immediate .badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.action-card.immediate ul { list-style: none; padding: 0; }
+.action-card.immediate li {
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.action-card.immediate li:last-child { border-bottom: none; }
+.action-card.immediate li::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.action-card.immediate li b { color: #fff; font-weight: 800; }
+
+.action-card.rhythm {
+  background: var(--ad-blue);
+  color: #fff;
+}
+.action-card.rhythm .act-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.action-card.rhythm .act-sub {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+.action-card.rhythm .badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255,255,255,0.20);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.action-card.rhythm ul { list-style: none; padding: 0; }
+.action-card.rhythm li {
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+}
+.action-card.rhythm li:last-child { border-bottom: none; }
+.action-card.rhythm li b {
+  color: #ffb258;
+  font-weight: 800;
+  font-family: 'DIN', 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   页脚
+   ============================================================ */
+.page-footer {
+  background: var(--text-primary);
+  color: rgba(255,255,255,0.6);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+}
+.page-footer .tl { color: #fffefa; font-weight: 700; opacity: 0.85; }
+.page-footer .tr { color: #ffb258; font-weight: 700; opacity: 0.95; }
+
+/* ============================================================
+   入场动画
+   ============================================================ */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section { animation: rise 0.45s ease both; }
+.section:nth-child(1) { animation-delay: 0.05s; }
+.section:nth-child(2) { animation-delay: 0.12s; }
+.section:nth-child(3) { animation-delay: 0.19s; }
+.section:nth-child(4) { animation-delay: 0.26s; }
+.section:nth-child(5) { animation-delay: 0.33s; }
+.section:nth-child(6) { animation-delay: 0.40s; }
+.section:nth-child(7) { animation-delay: 0.47s; }
+.section:nth-child(8) { animation-delay: 0.54s; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ============================================================
+   打印
+   ============================================================ */
+@media print {
+  body { background: #fff; }
+  .snapshot { box-shadow: none; margin: 0; border-radius: 0; }
+  .section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== 主题切换器 ========== -->
+<div id="theme-switcher" aria-label="主题切换">
+  <button data-theme="blue"   title="深蓝专业" style="background:#1E40AF"></button>
+  <button data-theme="brown"  title="棕金品质" style="background:#5a3f1f"></button>
+  <button data-theme="green"  title="墨绿生态" style="background:#166534"></button>
+  <button data-theme="red"    title="中国红"   style="background:#DC2626"></button>
+  <button data-theme="purple" title="科技紫"   style="background:#7C3AED"></button>
+</div>
+
+<!-- ========== 截图目标容器 ========== -->
+<div class="snapshot" contenteditable="true" spellcheck="false">
+
+  <!-- ============= 品牌顶栏 ============= -->
+  <div class="brand-bar">
+    <h1>锋味派 · 2026年6月新客数据与出价建议</h1>
+    <div class="brand-meta">
+      基于全店新客实测数据<br>
+      腾讯广告 · 食品行业
+    </div>
+  </div>
+
+  <!-- ============= 区块 1 · 大盘 vs 锋味派对比（新增·调整1）============= -->
+  <section class="section">
+    <div class="section-title">
+      <span class="ord">01</span>
+      <h2>先看大盘：广告拉新力被低估了吗？</h2>
+    </div>
+    <div class="section-sub">
+      行业普遍认知 vs 锋味派单店实测——同一句话，两种结论。
+    </div>
+
+    <div class="compare bar-stripe stripe-orange">
+      <div class="compare-card left bar-stripe stripe-blue" style="border-left-width:3px; padding-left:18px;">
+        <span class="tag tag-red">大盘 · 全行业用户分布</span>
+        <div class="compare-headline">
+          非广告域流量新客占比 <span class="hl-red">&lt; 40%</span>
+        </div>
+        <div class="compare-sub">
+          局限在单一视频号流量的拉新价值有限
+        </div>
+        <ul class="compare-bullets">
+          <li>· <b>视频号单渠道天花板</b>：流量 × 转化 × 品类适配 三重约束</li>
+        </ul>
+      </div>
+
+      <div class="compare-divider"></div>
+
+      <div class="compare-card right bar-stripe stripe-orange" style="border-left-width:3px; padding-left:18px;">
+        <span class="tag tag-orange">锋味派 · 单店实测</span>
+        <div class="compare-headline">
+          6月新客 <span class="hl-orange">&gt; 60%</span> 来自广告
+        </div>
+        <div class="compare-sub">
+          单看锋味派，6月新客贡献广告超过 6 成
+        </div>
+        <ul class="compare-bullets">
+          <li>· <b>反共识个案</b>：比大盘更需要 ADQ 拉新接力，而非被动等待自然流</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 区块 2 · 6月新客盘（合并·进度条+双卡）============= -->
+  <section class="section">
+    <div class="section-title">
+      <span class="ord">02</span>
+      <h2>6月新客盘 · 广告 vs 自然流</h2>
+    </div>
+    <div class="section-sub">
+      全店新用户 <b>23,079 人</b>（占月报 63.3%）· 广告 52.6% / 自然流 47.4%
+    </div>
+
+    <div class="bar-stripe stripe-blue" style="padding-top:6px; margin-bottom:16px;">
+      <div class="source-split">
+        <span class="source-label">广告带来</span>
+        <div class="bar-track">
+          <div class="bar-fill ad">12,128 人 · <span class="num">52.6%</span></div>
+        </div>
+        <span class="source-label">自然流</span>
+        <div class="bar-track">
+          <div class="bar-fill nat">10,951 人 · <span class="num">47.4%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="detail-card ad bar-stripe stripe-blue" style="border-left-width:0;">
+        <div class="card-title">📣 广告流 · 新客详情</div>
+        <div class="tri">
+          <div class="cell"><span class="num">52.6%</span><span class="lbl">新用户中<br>广告占比</span></div>
+          <div class="cell"><span class="num">12,128</span><span class="lbl">广告带来<br>新用户</span></div>
+          <div class="cell"><span class="num">60%</span><span class="lbl">广告流量<br>中新客占比</span></div>
+        </div>
+      </div>
+      <div class="detail-card nat bar-stripe stripe-green" style="border-left-width:0;">
+        <div class="card-title">🌿 自然流 · 新客详情</div>
+        <div class="tri">
+          <div class="cell"><span class="num">47.4%</span><span class="lbl">新用户中<br>自然流占比</span></div>
+          <div class="cell"><span class="num">10,951</span><span class="lbl">自然流带来<br>新用户</span></div>
+          <div class="cell"><span class="num">67.4%</span><span class="lbl">自然流流量<br>中新客占比</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 区块 4 · 广告出价可以更高（LTV 五步推导链）============= -->
+  <section class="section">
+    <div class="section-title">
+      <span class="ord">03</span>
+      <h2>广告出价可以更高——LTV 五步推导</h2>
+    </div>
+    <div class="section-sub">
+      从广告新客占比 → 复购率 → 复购单数 → 全年 LTV 增量 → 出价提升空间，五步走清逻辑。
+    </div>
+
+    <div class="ltv">
+      <div class="ltv-card">
+        <span class="step-tag">STEP 1</span>
+        <div class="num">60<small>%</small></div>
+        <div class="lbl">广告新客占比</div>
+        <div class="meta">6 月广告流中<br>60% 是新客</div>
+      </div>
+      <div class="ltv-arrow">→</div>
+      <div class="ltv-card">
+        <span class="step-tag">STEP 2</span>
+        <div class="num">28<small>%</small></div>
+        <div class="lbl">新客年复购率</div>
+        <div class="meta">未来 1 年内<br>会复购的比例</div>
+      </div>
+      <div class="ltv-arrow">→</div>
+      <div class="ltv-card">
+        <span class="step-tag">STEP 3</span>
+        <div class="num">2.5<small>单</small></div>
+        <div class="lbl">复购用户平均单数</div>
+        <div class="meta">复购者未来一年<br>下单次数</div>
+      </div>
+      <div class="ltv-arrow plus">＝</div>
+      <div class="ltv-card derive">
+        <span class="step-tag">STEP 4 · LTV 增量</span>
+        <div class="num">+94.85<small>元</small></div>
+        <div class="lbl">单新客年 LTV 增量</div>
+        <div class="meta">28% × 2.5 × 135.5<br>= 复购带来的额外价值</div>
+      </div>
+      <div class="ltv-arrow">→</div>
+      <div class="ltv-card final">
+        <span class="step-tag">STEP 5 · 结论</span>
+        <div class="num">+42<small>%</small></div>
+        <div class="lbl">出价可提升空间</div>
+        <div class="meta">全年 ROI ≥ 3 口径下<br>混合出价 45 → 64 元</div>
+      </div>
+    </div>
+
+    <div class="ltv-formula">
+      <b>核心公式（每笔广告成交订单的全年综合价值）：</b><br>
+      首单价值 <b>135.5 元</b> + 新客 LTV 增量 <b>60% × 28% × 2.5 × 135.5</b>
+      = 135.5 + <span class="highlight-box">56.91</span> = <b>192.4 元</b><br>
+      → 全年 ROI ≥ 3 出价上限 = 192.4 / 3 ≈ <span class="highlight-box">64 元</span>
+      &nbsp;·&nbsp; 若开专攻新客计划 = 230.4 / 3 ≈ <span class="highlight-box">77 元</span>
+    </div>
+  </section>
+
+  <!-- ============= 区块 5 · 复购率对比（新增·调整2）============= -->
+  <section class="section">
+    <div class="section-title">
+      <span class="ord">04</span>
+      <h2>复购用户占比对比：ADQ 新客真的"更值钱"</h2>
+    </div>
+    <div class="section-sub">
+      把上面"新客全年价值"再补一刀——用复购数据验证广告新客的长期价值。
+    </div>
+
+    <div class="repurchase">
+      <div class="rp-cap">锋味派 2025 年 6 月 — 2026 年 7 月 · 全量成交用户复购分析 · 复购用户占比</div>
+      <div class="rp-grid">
+        <div class="rp-cell">
+          <div class="lbl">年度复购用户占比<br>（广告流量新客）</div>
+          <div class="big-num orange num">28%</div>
+        </div>
+        <div class="rp-divider"></div>
+        <div class="rp-cell">
+          <div class="lbl">年度复购用户占比<br>（非广告域新客）</div>
+          <div class="big-num gray num">14%</div>
+        </div>
+        <div class="rp-divider"></div>
+        <div class="rp-cell gap">
+          <div class="lbl">差距</div>
+          <div class="big-num num">+14pp</div>
+          <div class="sub">广告新客复购用户占比显著高于非广告域</div>
+          <div class="rp-badge">★ ADQ 新客价值更高</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 区块 6 · 出价建议 + 执行动作（合并）============= -->
+  <section class="section">
+    <div class="section-title">
+      <span class="ord">05</span>
+      <h2>出价建议 · 换标准不换 ROI · 两路并行落地</h2>
+    </div>
+    <div class="section-sub">
+      "首单 ROI ≥ 3" 是硬约束天花板；"全年 LTV ROI ≥ 3" 才是合理上限——按下表分两路执行。
+    </div>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th style="width:22%;">衡量口径</th>
+          <th style="width:22%;">出价上限</th>
+          <th style="width:18%;">拿量能力</th>
+          <th>执行动作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="kind-current">当前</span>首单 ROI ≥ 3</td>
+          <td><span class="num-gray num">~45元</span></td>
+          <td><span class="pill warn">受限</span></td>
+          <td>硬约束拿量空间</td>
+        </tr>
+        <tr class="suggest-row">
+          <td><span class="kind-suggest">建议 · 混合</span>全年 LTV ROI ≥ 3</td>
+          <td>
+            <div class="num-cell">
+              <span class="num num">~64元</span>
+              <span class="sub">首单 135.5 + 新客 LTV 增量 56.9 = 192.4 / 3</span>
+            </div>
+          </td>
+          <td><span class="pill good">+42%</span></td>
+          <td>老计划从 <b>~45 → 60~64 元</b>，每次 ≤ 20%，观察 3~5 天</td>
+        </tr>
+        <tr class="suggest-row">
+          <td><span class="kind-suggest">建议 · 新客专线</span>新客 LTV ROI ≥ 3</td>
+          <td>
+            <div class="num-cell">
+              <span class="num num">~77元</span>
+              <span class="sub">新客年 LTV 230.4 / 3（135.5 + 94.85）</span>
+            </div>
+          </td>
+          <td><span class="pill good">+71%</span></td>
+          <td>新建「新客拓客」计划，排除近 365 天已购用户，目标出价 <b>70~77 元</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============= 区块 8 · 页脚 ============= -->
+  <footer class="page-footer">
+    <span class="tl">腾讯广告 · 锋味派</span>
+    <span class="tr">2026年7月</span>
+  </footer>
+
+</div>
+
+<!-- ========== 截图导出按钮 ========== -->
+<button id="export-btn" type="button">📸 导出 4K 图片</button>
+
+<script>
+/* === 1. 主题切换 === */
+(function initThemeSwitcher() {
+  const switcher = document.getElementById('theme-switcher');
+  if (!switcher) return;
+  const buttons = switcher.querySelectorAll('button');
+  const html = document.documentElement;
+  function setActive(theme) {
+    html.setAttribute('data-theme', theme);
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.theme === theme));
+  }
+  buttons.forEach(btn => btn.addEventListener('click', () => setActive(btn.dataset.theme)));
+  setActive(html.getAttribute('data-theme') || 'brown');
+})();
+
+/* === 2. html2canvas 截图导出（多 CDN 回退）=== */
+(function initExport() {
+  const btn = document.getElementById('export-btn');
+  if (!btn) return;
+
+  const CDN_URLS = [
+    'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js',
+    'https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'
+  ];
+
+  function loadScript(url) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = url;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  async function loadH2C() {
+    if (window.html2canvas) return window.html2canvas;
+    for (const url of CDN_URLS) {
+      try {
+        await loadScript(url);
+        if (window.html2canvas) return window.html2canvas;
+      } catch (e) { /* try next */ }
+    }
+    throw new Error('html2canvas 加载失败，请检查网络');
+  }
+
+  btn.addEventListener('click', async () => {
+    const target = document.querySelector('.snapshot');
+    if (!target) { alert('未找到 .snapshot 容器'); return; }
+
+    btn.disabled = true;
+    const oldText = btn.textContent;
+    btn.textContent = '⏳ 生成中...';
+
+    const toolbars = document.querySelectorAll('#theme-switcher, #export-btn');
+    toolbars.forEach(el => el.style.visibility = 'hidden');
+
+    try {
+      const html2canvas = await loadH2C();
+      const canvas = await html2canvas(target, {
+        scale: 3,
+        useCORS: true,
+        backgroundColor: getComputedStyle(document.body).backgroundColor || '#faf6ee',
+        logging: false,
+        windowWidth: target.scrollWidth,
+        windowHeight: target.scrollHeight
+      });
+      const link = document.createElement('a');
+      const ts = new Date().toISOString().slice(0, 16).replace(/[T:]/g, '-');
+      link.download = `fengweipai-juli-xinke-${ts}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    } catch (err) {
+      alert('导出失败：' + err.message);
+      console.error(err);
+    } finally {
+      toolbars.forEach(el => el.style.visibility = '');
+      btn.disabled = false;
+      btn.textContent = oldText;
+    }
+  });
+})();
+</script>
+<style>
+/* 主题切换器与导出按钮的样式（在主样式之后追加以确保覆盖）*/
+#theme-switcher {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 6px;
+  background: rgba(255,255,255,0.95);
+  padding: 6px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 9999;
+}
+#theme-switcher button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  outline: none;
+}
+#theme-switcher button:hover { transform: scale(1.15); }
+#theme-switcher button.active {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px #2b2118;
+}
+@media print { #theme-switcher { display: none !important; } }
+
+#export-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  background: #2b2118;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.15s ease, background 0.15s ease;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+#export-btn:hover { transform: translateY(-2px); background: #1a1208; }
+#export-btn:disabled { opacity: 0.6; cursor: wait; }
+@media print { #export-btn { display: none !important; } }
+</style>
+</body>
+</html>
