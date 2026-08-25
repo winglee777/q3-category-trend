@@ -417,6 +417,165 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================================
+   v12 · 三层推演布局（客观数据 → 两口径 → 结论）
+   ============================================================ */
+.ltv-layer {
+  margin-top: 20px;
+}
+.ltv-layer:first-of-type { margin-top: 8px; }
+.layer-title {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 13.5px; color: var(--text-secondary); font-weight: 600;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--border);
+}
+.layer-tag {
+  display: inline-flex; align-items: center;
+  padding: 3px 10px; border-radius: 4px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.3px;
+  font-family: 'DIN', 'PingFang SC', sans-serif;
+}
+.layer-tag.data { background: #dbeafe; color: #1e40af; }
+.layer-tag.calc { background: #fff4e6; color: var(--accent); }
+.layer-tag.conc { background: #dcfce7; color: #166534; }
+
+/* 中间桥：核心公式 */
+.ltv-bridge {
+  background: linear-gradient(90deg, #fff8f0 0%, #ffe9d3 100%);
+  border: 1.5px dashed var(--accent);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin: 16px 0;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  font-size: 13.5px; color: var(--text-secondary);
+}
+.ltv-bridge b { color: var(--accent); font-weight: 800; }
+.ltv-bridge .formula-line { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+.ltv-bridge .highlight-box {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  padding: 3px 10px; border-radius: 4px; font-weight: 800;
+  font-size: 15px;
+}
+.ltv-bridge .bridge-note {
+  flex-basis: 100%;
+  font-size: 11.5px; color: var(--text-muted); font-style: italic;
+  margin-top: 2px;
+}
+
+/* 两口径推演卡（左右分栏） */
+.dual-formula {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.formula-card {
+  border-radius: 10px;
+  padding: 18px 20px;
+  position: relative;
+}
+.formula-card.mix {
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  border: 1.5px solid #6366f1;
+}
+.formula-card.pure {
+  background: linear-gradient(135deg, #fff4e6 0%, #ffe9d3 100%);
+  border: 2px solid var(--accent);
+  box-shadow: 0 4px 16px rgba(217, 122, 31, 0.15);
+}
+.formula-card .fc-head {
+  display: flex; align-items: baseline; gap: 8px;
+  padding-bottom: 10px; margin-bottom: 12px;
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+.fc-tag {
+  font-size: 14px; font-weight: 800;
+}
+.formula-card.mix .fc-tag { color: #4338ca; }
+.formula-card.pure .fc-tag { color: var(--accent); }
+.fc-sub {
+  font-size: 11.5px; color: var(--text-muted); font-weight: 500;
+}
+.fc-body { margin-bottom: 14px; }
+.fc-line {
+  font-size: 12px; color: var(--text-muted); font-weight: 600;
+  margin-bottom: 6px;
+}
+.fc-formula {
+  font-size: 16px; font-weight: 700; color: var(--text-primary);
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 6px;
+  font-family: 'DIN', 'PingFang SC', sans-serif;
+  letter-spacing: 0.2px;
+}
+.formula-card.mix .fc-formula b { color: #4338ca; }
+.formula-card.pure .fc-formula b { color: var(--accent); }
+.fc-note {
+  font-size: 11.5px; color: var(--text-muted); line-height: 1.55;
+  margin-top: 6px;
+}
+.fc-result {
+  display: flex; align-items: center; gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+}
+.fc-arrow { font-size: 22px; font-weight: 700; color: var(--text-muted); }
+.fc-num {
+  font-size: 36px; font-weight: 900; line-height: 1;
+  font-family: 'DIN', 'PingFang SC', sans-serif; letter-spacing: -0.5px;
+}
+.fc-num small { font-size: 18px; font-weight: 700; }
+.formula-card.mix .fc-num { color: #4338ca; }
+.formula-card.pure .fc-num { color: var(--accent); }
+.fc-cap {
+  font-size: 12px; color: var(--text-secondary); font-weight: 600;
+  margin-left: auto;
+}
+
+/* 结论层 */
+.conclusion-layer {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 18px 22px;
+}
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.conc-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 12px;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+}
+.ci-cur {
+  font-size: 13px; color: var(--text-muted);
+}
+.ci-cur b { color: var(--text-secondary); }
+.ci-arrow { color: var(--accent); font-weight: 800; font-size: 18px; }
+.ci-new {
+  font-size: 24px; font-weight: 900;
+  font-family: 'DIN', 'PingFang SC', sans-serif;
+}
+.ci-new b { font-weight: 900; }
+.ci-new small { font-size: 12px; font-weight: 700; margin-left: 4px; }
+.ci-new.mix { color: #4338ca; }
+.ci-new.pure { color: var(--accent); }
+.ci-tag {
+  margin-left: auto;
+  font-size: 11.5px; font-weight: 700; color: var(--text-secondary);
+  padding: 3px 10px; border-radius: 12px;
+  background: #e2e8f0;
+}
+.conc-item:has(.mix) .ci-tag { background: #e0e7ff; color: #4338ca; }
+.conc-item:has(.pure) .ci-tag { background: #fff4e6; color: var(--accent); }
+
+/* ============================================================
    区块 5 · 复购率对比深蓝卡
    ============================================================ */
 .repurchase {
@@ -813,59 +972,120 @@ h1, h2, h3, h4 {
     </div>
   </section>
 
-  <!-- ============= 区块 4 · 广告出价可以更高（LTV 五步推导链）============= -->
+  <!-- ============= 区块 3 · LTV 三层推演（客观数据 → 两口径 → 结论）============= -->
   <section class="section">
     <div class="section-title">
       <span class="ord">03</span>
-      <h2>广告出价可以更高——LTV 五步推导</h2>
+      <h2>广告出价可以更高 —— 新客 LTV 三层推演</h2>
     </div>
     <div class="section-sub">
-      从广告新客占比 → 复购率 → 复购单数 → 全年 LTV 增量 → 出价提升空间，五步走清逻辑。
+      三条客观数据 → 两种口径推算 → 一个共同结论：<b>无论哪种路径，出价都能安全提升。</b>
     </div>
 
-    <div class="ltv">
-      <div class="ltv-card">
-        <span class="step-tag">STEP 1</span>
-        <div class="num">60<small>%</small></div>
-        <div class="lbl">广告新客占比</div>
-        <div class="meta">6 月广告流中<br>60% 是新客</div>
+    <!-- 第一层：三条客观数据 -->
+    <div class="ltv-layer">
+      <div class="layer-title">
+        <span class="layer-tag data">① 客观数据</span>
+        三条实测数据（经营号打通 · 2025.6-2026.7 全量成交用户）
       </div>
-      <div class="ltv-arrow">→</div>
-      <div class="ltv-card">
-        <span class="step-tag">STEP 2</span>
-        <div class="num">28<small>%</small></div>
-        <div class="lbl">新客年复购率</div>
-        <div class="meta">未来 1 年内<br>会复购的比例</div>
-      </div>
-      <div class="ltv-arrow">→</div>
-      <div class="ltv-card">
-        <span class="step-tag">STEP 3</span>
-        <div class="num">2.5<small>单</small></div>
-        <div class="lbl">复购用户平均单数</div>
-        <div class="meta">复购者未来一年<br>下单次数</div>
-      </div>
-      <div class="ltv-arrow plus">＝</div>
-      <div class="ltv-card derive">
-        <span class="step-tag">STEP 4 · LTV 增量</span>
-        <div class="num">+94.85<small>元</small></div>
-        <div class="lbl">单新客年 LTV 增量</div>
-        <div class="meta">28% × 2.5 × 135.5<br>= 复购带来的额外价值</div>
-      </div>
-      <div class="ltv-arrow">→</div>
-      <div class="ltv-card final">
-        <span class="step-tag">STEP 5 · 结论</span>
-        <div class="num">+42<small>%</small></div>
-        <div class="lbl">出价可提升空间</div>
-        <div class="meta">全年 ROI ≥ 3 口径下<br>混合出价 45 → 64 元</div>
+      <div class="ltv" style="grid-template-columns: 1fr 24px 1fr 24px 1fr;">
+        <div class="ltv-card">
+          <span class="step-tag">数据 1</span>
+          <div class="num">60<small>%</small></div>
+          <div class="lbl">广告新客占比</div>
+          <div class="meta">广告成交订单中<br>60% 是首购新客</div>
+        </div>
+        <div class="ltv-arrow">·</div>
+        <div class="ltv-card">
+          <span class="step-tag">数据 2</span>
+          <div class="num">28<small>%</small></div>
+          <div class="lbl">新客年复购率</div>
+          <div class="meta">广告新客中<br>28% 未来 1 年会复购</div>
+        </div>
+        <div class="ltv-arrow">·</div>
+        <div class="ltv-card">
+          <span class="step-tag">数据 3</span>
+          <div class="num">2.85<small>单</small></div>
+          <div class="lbl">复购者平均单数</div>
+          <div class="meta">会复购的新客<br>平均下单 2.85 笔</div>
+        </div>
       </div>
     </div>
 
-    <div class="ltv-formula">
-      <b>核心公式（每笔广告成交订单的全年综合价值）：</b><br>
-      首单价值 <b>135.5 元</b> + 新客 LTV 增量 <b>60% × 28% × 2.5 × 135.5</b>
-      = 135.5 + <span class="highlight-box">56.91</span> = <b>192.4 元</b><br>
-      → 全年 ROI ≥ 3 出价上限 = 192.4 / 3 ≈ <span class="highlight-box">64 元</span>
-      &nbsp;·&nbsp; 若开专攻新客计划 = 230.4 / 3 ≈ <span class="highlight-box">77 元</span>
+    <!-- 中间桥：核心公式 -->
+    <div class="ltv-bridge">
+      <b>核心公式 · 每个新客的期望复购价值：</b>
+      <span class="formula-line">28% × 2.85 × 135.5 = <span class="highlight-box">108.10 元/新客</span></span>
+      <span class="bridge-note">（分母：所有新客；已把"72% 不复购者拉低平均"这一漏斗计算在内）</span>
+    </div>
+
+    <!-- 第二层：两口径推演 -->
+    <div class="ltv-layer">
+      <div class="layer-title">
+        <span class="layer-tag calc">② 两口径推演</span>
+        同一份数据，两种衡量口径 → 两种出价上限
+      </div>
+      <div class="dual-formula">
+        <div class="formula-card mix">
+          <div class="fc-head">
+            <span class="fc-tag">口径 A · 混合出价</span>
+            <span class="fc-sub">老计划直接用，不改结构</span>
+          </div>
+          <div class="fc-body">
+            <div class="fc-line">分母：每笔广告订单（含新老混合）</div>
+            <div class="fc-formula">
+              135.5 + <b>60%</b> × 108.10 = <b>200.4 元</b>
+            </div>
+            <div class="fc-note">新客带来 108.10，但 40% 老客订单没这份收益 → 需要按新客占比稀释</div>
+          </div>
+          <div class="fc-result">
+            <span class="fc-arrow">→</span>
+            <span class="fc-num">67<small>元</small></span>
+            <span class="fc-cap">全年 ROI ≥ 3 出价上限</span>
+          </div>
+        </div>
+
+        <div class="formula-card pure">
+          <div class="fc-head">
+            <span class="fc-tag">口径 B · 新客专线</span>
+            <span class="fc-sub">新建计划 · 排除近 365 天已购</span>
+          </div>
+          <div class="fc-body">
+            <div class="fc-line">分母：每笔新客订单（100% 新客）</div>
+            <div class="fc-formula">
+              135.5 + 108.10 = <b>243.6 元</b>
+            </div>
+            <div class="fc-note">专线计划里 100% 都是新客，无需老客稀释 → 直接叠加复购增量</div>
+          </div>
+          <div class="fc-result">
+            <span class="fc-arrow">→</span>
+            <span class="fc-num">81<small>元</small></span>
+            <span class="fc-cap">全年 ROI ≥ 3 出价上限</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第三层：结论 -->
+    <div class="ltv-layer conclusion-layer">
+      <div class="layer-title">
+        <span class="layer-tag conc">③ 结论</span>
+        无论选哪条路径，都能拿到出价提升
+      </div>
+      <div class="conclusion-grid">
+        <div class="conc-item">
+          <div class="ci-cur">当前上限 <b>~45 元</b></div>
+          <div class="ci-arrow">→</div>
+          <div class="ci-new mix"><b>67 元</b><small>（+48%）</small></div>
+          <div class="ci-tag">混合路径 · 稳</div>
+        </div>
+        <div class="conc-item">
+          <div class="ci-cur">当前上限 <b>~45 元</b></div>
+          <div class="ci-arrow">→</div>
+          <div class="ci-new pure"><b>81 元</b><small>（+80%）</small></div>
+          <div class="ci-tag">新客专线 · 快</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -932,23 +1152,23 @@ h1, h2, h3, h4 {
           <td><span class="kind-suggest">建议 · 混合</span>全年 LTV ROI ≥ 3</td>
           <td>
             <div class="num-cell">
-              <span class="num num">~64元</span>
-              <span class="sub">首单 135.5 + 新客 LTV 增量 56.9 = 192.4 / 3</span>
+              <span class="num num">~67元</span>
+              <span class="sub">首单 135.5 + 60% × 108.10 = 200.4 / 3</span>
             </div>
           </td>
-          <td><span class="pill good">+42%</span></td>
-          <td>老计划从 <b>~45 → 60~64 元</b>，每次 ≤ 20%，观察 3~5 天</td>
+          <td><span class="pill good">+48%</span></td>
+          <td>老计划从 <b>~45 → 60~67 元</b>，每次 ≤ 20%，观察 3~5 天</td>
         </tr>
         <tr class="suggest-row">
           <td><span class="kind-suggest">建议 · 新客专线</span>新客 LTV ROI ≥ 3</td>
           <td>
             <div class="num-cell">
-              <span class="num num">~77元</span>
-              <span class="sub">新客年 LTV 230.4 / 3（135.5 + 94.85）</span>
+              <span class="num num">~81元</span>
+              <span class="sub">新客单价 243.6 / 3（135.5 + 108.10）</span>
             </div>
           </td>
-          <td><span class="pill good">+71%</span></td>
-          <td>新建「新客拓客」计划，排除近 365 天已购用户，目标出价 <b>70~77 元</b></td>
+          <td><span class="pill good">+80%</span></td>
+          <td>新建「新客拓客」计划，排除近 365 天已购用户，目标出价 <b>70~81 元</b></td>
         </tr>
       </tbody>
     </table>
