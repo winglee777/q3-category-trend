@@ -499,8 +499,6 @@ html, body {
 .rk-tbl thead th.th-prio { width: 82px; text-align: center; }
 .rk-tbl thead th.th-cat { width: 130px; }
 .rk-tbl thead th.th-brand { width: 130px; }
-.rk-tbl thead th.th-plat { width: 130px; text-align: center; }
-
 .rk-tbl tbody td {
   padding: 8px 12px;
   border-bottom: 1px solid #f1f5f9;
@@ -515,8 +513,6 @@ html, body {
 .rk-tbl tbody td.td-spu { color: var(--rk-ink); font-weight: 600; max-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .rk-tbl tbody td.td-brand { color: var(--rk-ink2); font-size: 12px; }
 .rk-tbl tbody td.td-cat { color: var(--rk-ink2); font-size: 12px; white-space:nowrap; }
-.rk-tbl tbody td.td-plat { text-align: center; }
-
 .prio-badge {
   display: inline-block; font-size: 11px; font-weight: 800;
   padding: 2px 8px; border-radius: 4px; letter-spacing: .3px;
@@ -671,7 +667,7 @@ body.theme-zq .tab.zq.active {
 }
 
 /* ============ v8: 品类卡合并双渠道 + 强化内容策略 ============ */
-/* 1. 隐藏"📱 视频号小店 / 🎵 抖音商品榜"渠道小标题 */
+/* 渠道小标题整体隐藏 · 整图聚焦视频号小店单渠道 */
 .cc-ch-h { display: none !important; }
 /* 2. 双渠道从两列变一列，视觉上无缝合并 */
 .cc-channels {
@@ -875,7 +871,7 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
   <h2 class="sheet-name">开学季</h2>
   <span class="win">📅 8月24日 - 9月10日</span>
 </div>
-<div class="kpi-bar"><div class="kpi"><span class="kv" style="color:var(--primary)">10k+</span><span class="kl">应季商品池</span></div><div class="kpi"><span class="kv" style="color:#ff7a35">高应季浓度</span><span class="kl">P0 强应季</span></div><div class="kpi"><span class="kv" style="color:#3b5378">常销主力</span><span class="kl">P1 常销</span></div><div class="kpi"><span class="kv" style="color:#00a86b">小店主渠道</span><span class="kl">视频号+抖音合并</span></div><div class="kpi"><span class="kv" style="color:#e83e8c">拼多多补充</span><span class="kl">备选池</span></div><div class="kpi"><span class="kv" style="color:#06b6d4">5k+</span><span class="kl">独立品牌</span></div></div>
+<div class="kpi-bar"><div class="kpi"><span class="kv" style="color:var(--primary)">10k+</span><span class="kl">应季商品池</span></div><div class="kpi"><span class="kv" style="color:#ff7a35">高应季浓度</span><span class="kl">P0 强应季</span></div><div class="kpi"><span class="kv" style="color:#3b5378">常销主力</span><span class="kl">P1 常销</span></div><div class="kpi"><span class="kv" style="color:#00a86b">小店主渠道</span><span class="kl">视频号小店</span></div></div>
 <div class="section-title">三大阶段作战节奏</div>
 <div class="stage-grid">
 <div class="stage-card">
@@ -964,19 +960,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">米面粮油·大米/糯米/小米</b>    <span class="dir-n">315+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">黔唛哆</span><span class="lead-sep">·</span><span class="lead-sub">面条</span><span class="lead-sep">、</span><span class="lead-brand">馋香泽食</span><span class="lead-sep">·</span><span class="lead-sub">大米</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">速食半成品·面包/包子</b>    <span class="dir-n">350+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">七小七</span><span class="lead-sep">·</span><span class="lead-sub">面包</span><span class="lead-sep">、</span><span class="lead-brand">安琪高活性耐高糖</span><span class="lead-sep">·</span><span class="lead-sub">馒头</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">海鲜预制菜·海带/海虾</b>    <span class="dir-n">72+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">妙鲜冠</span><span class="lead-sep">·</span><span class="lead-sub">裙带菜干</span><span class="lead-sep">、</span><span class="lead-brand">花田熊F</span><span class="lead-sep">·</span><span class="lead-sub">鱼香肉丝</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">调味品·酱油/生抽</b>    <span class="dir-n">87+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">野鲜君y</span><span class="lead-sep">·</span><span class="lead-sub">调味品</span><span class="lead-sep">、</span><span class="lead-brand">农道好物</span><span class="lead-sep">·</span><span class="lead-sub">海盐</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">速食半成品·方便面/螺蛳粉</b>    <span class="dir-n">1267+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">芯蒸呈</span><span class="lead-sep">·</span><span class="lead-sub">火鸡面</span><span class="lead-sep">、</span><span class="lead-brand">大希地</span><span class="lead-sep">·</span><span class="lead-sub">鸡胸</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">米面粮油·大米/糯米/小米</b>    <span class="dir-n">411+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">十月稻田</span><span class="lead-sep">·</span><span class="lead-sub">大米</span><span class="lead-sep">、</span><span class="lead-brand">讷粮优选</span><span class="lead-sep">·</span><span class="lead-sub">大米</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">调味品·调料/辣椒面</b>    <span class="dir-n">298+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">超范儿</span><span class="lead-sep">·</span><span class="lead-sub">调味品</span><span class="lead-sep">、</span><span class="lead-brand">野鲜君</span><span class="lead-sep">·</span><span class="lead-sub">调味品</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">佐餐小菜·下饭菜/酸菜</b>    <span class="dir-n">287+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">海天</span><span class="lead-sep">·</span><span class="lead-sub">拌面酱</span><span class="lead-sep">、</span><span class="lead-brand">开味狗</span><span class="lead-sep">·</span><span class="lead-sub">辣椒酱</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">宿舍党 · 宝妈</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">宿舍速食+便当+一人食，省时刚需</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏家庭装，抖音偏一人食</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">宿舍速食/便当，家庭装视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">宿舍速食+便当+一人食，省时刚需</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">宿舍速食/便当，家庭装视频号</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#10b981">
@@ -989,19 +978,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">夏秋鲜果·石榴/苹果</b>    <span class="dir-n">547+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">甄磨坊</span><span class="lead-sep">·</span><span class="lead-sub">鲜枣</span><span class="lead-sep">、</span><span class="lead-brand">玉丰农业</span><span class="lead-sep">·</span><span class="lead-sub">百香果</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">禽肉蛋品·鸡蛋/猪肉</b>    <span class="dir-n">218+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">玩铁猩猩</span><span class="lead-sep">·</span><span class="lead-sub">牛排</span><span class="lead-sep">、</span><span class="lead-brand">科尔沁风干牛肉原</span><span class="lead-sep">·</span><span class="lead-sub">牛肉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">海鲜水产·海虾/海带</b>    <span class="dir-n">145+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">滋米生鲜</span><span class="lead-sep">·</span><span class="lead-sub">银鱼</span><span class="lead-sep">、</span><span class="lead-brand">渔佃</span><span class="lead-sep">·</span><span class="lead-sub">海参</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">秋季时令·板栗/铁棍山药</b>    <span class="dir-n">347+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">江月秋红</span><span class="lead-sep">·</span><span class="lead-sub">银耳</span><span class="lead-sep">、</span><span class="lead-brand">铁棍山药粉580</span><span class="lead-sep">·</span><span class="lead-sub">铁棍山药粉</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">夏秋鲜果·柚子/石榴</b>    <span class="dir-n">597+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">郁萌萌</span><span class="lead-sep">·</span><span class="lead-sub">猕猴桃</span><span class="lead-sep">、</span><span class="lead-brand">淘鲜晨</span><span class="lead-sep">·</span><span class="lead-sub">百香果</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">海鲜水产·大闸蟹/海参</b>    <span class="dir-n">117+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">福口居</span><span class="lead-sep">·</span><span class="lead-sub">海参</span><span class="lead-sep">、</span><span class="lead-brand">鑫明珠食</span><span class="lead-sep">·</span><span class="lead-sub">虾滑</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">禽肉蛋品·鸡蛋/鸭蛋</b>    <span class="dir-n">112+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">必胜客</span><span class="lead-sep">·</span><span class="lead-sub">牛排</span><span class="lead-sep">、</span><span class="lead-brand">东方甄选</span><span class="lead-sep">·</span><span class="lead-sub">鸡蛋</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">秋季时令·板栗/南瓜</b>    <span class="dir-n">178+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">朱惠元</span><span class="lead-sep">·</span><span class="lead-sub">铁棍山药</span><span class="lead-sep">、</span><span class="lead-brand">陆鲜生生</span><span class="lead-sep">·</span><span class="lead-sub">板栗</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">宝妈备餐 · 家庭</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">早餐食材+便携半成品，营养早餐心智</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏家庭装，抖音偏单品爆款</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">早餐食材家庭装视频号，便携单品抖音</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">早餐食材+便携半成品，营养早餐心智</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">早餐食材家庭装视频号，便携单品</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#0ea5e9">
@@ -1014,19 +996,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">维生素矿物质·维生素/钙铁锌</b>    <span class="dir-n">323+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">诺特兰德</span><span class="lead-sep">·</span><span class="lead-sub">钙铁锌</span><span class="lead-sep">、</span><span class="lead-brand">小碗良食</span><span class="lead-sep">·</span><span class="lead-sub">钙铁锌</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">益生菌酵素·益生菌/膳食纤维</b>    <span class="dir-n">155+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">华大营养</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span><span class="lead-sep">、</span><span class="lead-brand">三株集团</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">机能保健·叶黄素酯/DHA</b>    <span class="dir-n">96+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">华北营养</span><span class="lead-sep">·</span><span class="lead-sub">免疫球蛋白</span><span class="lead-sep">、</span><span class="lead-brand">诺特兰德</span><span class="lead-sep">·</span><span class="lead-sub">DHA</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">胶原蛋白美容·胶原蛋白/胶原蛋白肽</b>    <span class="dir-n">20+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">诺特兰德</span><span class="lead-sep">·</span><span class="lead-sub">番茄红素</span><span class="lead-sep">、</span><span class="lead-brand">艾小驼益</span><span class="lead-sep">·</span><span class="lead-sub">透明质酸</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">维生素矿物质·维生素/钙铁锌</b>    <span class="dir-n">294+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">诺特兰德</span><span class="lead-sep">·</span><span class="lead-sub">钙铁锌</span><span class="lead-sep">、</span><span class="lead-brand">21金维他</span><span class="lead-sep">·</span><span class="lead-sub">钙铁锌</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">机能保健·DHA/深海鱼油</b>    <span class="dir-n">128+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">养能健</span><span class="lead-sep">·</span><span class="lead-sub">DHA</span><span class="lead-sep">、</span><span class="lead-brand">仁和</span><span class="lead-sep">·</span><span class="lead-sub">DHA</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">蛋白粉增肌·蛋白粉/乳清蛋白</b>    <span class="dir-n">136+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">Foyes</span><span class="lead-sep">·</span><span class="lead-sub">乳清蛋白</span><span class="lead-sep">、</span><span class="lead-brand">康比特</span><span class="lead-sep">·</span><span class="lead-sub">蛋白粉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">益生菌酵素·益生菌/膳食纤维</b>    <span class="dir-n">138+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">呜咔实验室</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span><span class="lead-sep">、</span><span class="lead-brand">小胖瓶</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">学生党 · 家长</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">补脑营养+DHA+蛋白粉，学习营养</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏科普种草，抖音偏达人带货</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">补脑营养做科普，学生党达人转化</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">补脑营养+DHA+蛋白粉，学习营养</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">补脑营养做科普，学生党达人转化</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#f97316">
@@ -1039,19 +1014,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">秋季时令·花生/核桃</b>    <span class="dir-n">162+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">妙上品</span><span class="lead-sep">·</span><span class="lead-sub">南瓜</span><span class="lead-sep">、</span><span class="lead-brand">富昌食品</span><span class="lead-sep">·</span><span class="lead-sub">银耳</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">卤味熟食·米线/鸡爪</b>    <span class="dir-n">79+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">绝嘉食品</span><span class="lead-sep">·</span><span class="lead-sub">鸡爪</span><span class="lead-sep">、</span><span class="lead-brand">三只松鼠</span><span class="lead-sep">·</span><span class="lead-sub">魔芋爽</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">饼干糖果·巧克力/软糖软糖</b>    <span class="dir-n">53+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">红谷林</span><span class="lead-sep">·</span><span class="lead-sub">饼干</span><span class="lead-sep">、</span><span class="lead-brand">江中膳食</span><span class="lead-sep">·</span><span class="lead-sub">软糖软糖</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">果干蜜饯·桂圆干/梅干菜</b>    <span class="dir-n">33+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">农品多</span><span class="lead-sep">·</span><span class="lead-sub">蓝莓干</span><span class="lead-sep">、</span><span class="lead-brand">新疆小胡</span><span class="lead-sep">·</span><span class="lead-sub">葡萄干</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">卤味熟食·鸡爪/牛奶</b>    <span class="dir-n">25+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">脱骨侠</span><span class="lead-sep">·</span><span class="lead-sub">鸡爪</span><span class="lead-sep">、</span><span class="lead-brand">中国邮政</span><span class="lead-sep">·</span><span class="lead-sub">鸡爪</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">秋季时令·山楂/杏仁</b>    <span class="dir-n">11+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">博雅食品</span><span class="lead-sep">·</span><span class="lead-sub">豆腐</span><span class="lead-sep">、</span><span class="lead-brand">冰润达</span><span class="lead-sep">·</span><span class="lead-sub">即食生姜</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">糕点礼盒·糕点</b>    <span class="dir-n">2+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">和食乐</span><span class="lead-sep">·</span><span class="lead-sub">糕点</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">果干蜜饯·金桔/冻干刺梨</b>    <span class="dir-n">3+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">书荷姑娘</span><span class="lead-sep">·</span><span class="lead-sub">椰枣</span><span class="lead-sep">、</span><span class="lead-brand">京都念慈菴</span><span class="lead-sep">·</span><span class="lead-sub">金桔</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">学生</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">课间零食+便携分享，冲动消费</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏礼盒，抖音偏散装零食</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">课间零食散装冲量，便携分享装</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">课间零食+便携分享，冲动消费</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">课间零食散装冲量，便携分享装</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#ec4899">
@@ -1064,19 +1032,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">煲汤药材·黄芪/黄精</b>    <span class="dir-n">21+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">九华山九蒸九晒黄</span><span class="lead-sep">·</span><span class="lead-sub">黄精</span><span class="lead-sep">、</span><span class="lead-brand">先徽微</span><span class="lead-sep">·</span><span class="lead-sub">即食黄精</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">参茸贵细·人参/石斛</b>    <span class="dir-n">86+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">禾菇娘精品高山鹿</span><span class="lead-sep">·</span><span class="lead-sub">鹿茸干货</span><span class="lead-sep">、</span><span class="lead-brand">淼淼老菌</span><span class="lead-sep">·</span><span class="lead-sub">鹿茸干货</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">燕窝·燕窝</b>    <span class="dir-n">30+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">宫禧燕官</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span><span class="lead-sep">、</span><span class="lead-brand">宫禧燕冻干燕窝银</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">药食同源干货·藕粉/山药</b>    <span class="dir-n">18+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">源忆莲食</span><span class="lead-sep">·</span><span class="lead-sub">莲藕粉</span><span class="lead-sep">、</span><span class="lead-brand">砚西湖杭</span><span class="lead-sep">·</span><span class="lead-sub">藕粉</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">枸杞·红枸杞/枸杞原浆</b>    <span class="dir-n">169+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">宁之春</span><span class="lead-sep">·</span><span class="lead-sub">枸杞原浆</span><span class="lead-sep">、</span><span class="lead-brand">泰和信</span><span class="lead-sep">·</span><span class="lead-sub">枸杞</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">阿胶膏方·阿胶/玉灵膏</b>    <span class="dir-n">93+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">龙牡</span><span class="lead-sep">·</span><span class="lead-sub">膏滋</span><span class="lead-sep">、</span><span class="lead-brand">固本堂</span><span class="lead-sep">·</span><span class="lead-sub">阿胶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">燕窝·燕窝</b>    <span class="dir-n">78+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">御嬿</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span><span class="lead-sep">、</span><span class="lead-brand">泡小燕</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">煲汤药材·黄芪/茯苓</b>    <span class="dir-n">253+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">小葵花天才天麻精</span><span class="lead-sep">·</span><span class="lead-sub">天麻胶囊</span><span class="lead-sep">、</span><span class="lead-brand">九芝堂</span><span class="lead-sep">·</span><span class="lead-sub">五红汤</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">家长 · 养生</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">滋补+学习营养长线</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏故事种草，抖音偏源头直播</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">家长滋补，故事内容视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">滋补+学习营养长线</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">家长滋补，故事内容视频号</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#06b6d4">
@@ -1089,19 +1050,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">咖啡·速溶咖啡</b>    <span class="dir-n">4+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">四只猫</span><span class="lead-sep">·</span><span class="lead-sub">速溶咖啡</span><span class="lead-sep">、</span><span class="lead-brand">四只猫咖</span><span class="lead-sep">·</span><span class="lead-sub">速溶咖啡</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">果汁椰汁·苹果汁/果汁</b>    <span class="dir-n">30+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">莓日饮</span><span class="lead-sep">·</span><span class="lead-sub">混合果汁</span><span class="lead-sep">、</span><span class="lead-brand">100%苹果汁8</span><span class="lead-sep">·</span><span class="lead-sub">苹果汁</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">冲调谷物·燕麦片/麦片</b>    <span class="dir-n">23+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">麦片</span><span class="lead-sep">·</span><span class="lead-sub">燕麦片</span><span class="lead-sep">、</span><span class="lead-brand">好麦多</span><span class="lead-sep">·</span><span class="lead-sub">燕麦片</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">饮用水·苏打水/矿泉水</b>    <span class="dir-n">5+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">世鑫泉五大连池天</span><span class="lead-sep">·</span><span class="lead-sub">苏打水</span><span class="lead-sep">、</span><span class="lead-brand">百岁山</span><span class="lead-sep">·</span><span class="lead-sub">矿泉水</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">冲调谷物·燕麦片/豆浆粉</b>    <span class="dir-n">120+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">西麦</span><span class="lead-sep">·</span><span class="lead-sub">奇亚籽</span><span class="lead-sep">、</span><span class="lead-brand">永和豆浆</span><span class="lead-sep">·</span><span class="lead-sub">豆浆粉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">咖啡·速溶咖啡/冷萃</b>    <span class="dir-n">104+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">四只猫</span><span class="lead-sep">·</span><span class="lead-sub">速溶咖啡</span><span class="lead-sep">、</span><span class="lead-brand">西贡</span><span class="lead-sep">·</span><span class="lead-sub">速溶咖啡</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">果汁椰汁·椰子水/果汁</b>    <span class="dir-n">132+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">金豆芽</span><span class="lead-sep">·</span><span class="lead-sub">柚子汁</span><span class="lead-sep">、</span><span class="lead-brand">轻上</span><span class="lead-sep">·</span><span class="lead-sub">椰汁</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">饮用水·苏打水/矿泉水</b>    <span class="dir-n">87+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">长白山逍遥</span><span class="lead-sep">·</span><span class="lead-sub">白桦树汁</span><span class="lead-sep">、</span><span class="lead-brand">轻上</span><span class="lead-sep">·</span><span class="lead-sub">白桦树汁</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">学生党 · 白领</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">宿舍囤货+冲调便携，提神刚需</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏场景种草，抖音偏性价比组合</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">宿舍囤货组合装，冲调单品做场景</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">宿舍囤货+冲调便携，提神刚需</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">宿舍囤货组合装，冲调单品做场景</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#8b5cf6">
@@ -1114,19 +1068,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">驼奶/羊奶/普通奶粉·奶粉/驼奶</b>    <span class="dir-n">10+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">蒙牛</span><span class="lead-sep">·</span><span class="lead-sub">奶粉</span><span class="lead-sep">、</span><span class="lead-brand">澳洲Oceani</span><span class="lead-sep">·</span><span class="lead-sub">奶粉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">鲜奶·纯牛奶</b>    <span class="dir-n">22+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">简苏牛奶</span><span class="lead-sep">·</span><span class="lead-sub">纯牛奶</span><span class="lead-sep">、</span><span class="lead-brand">沙漠有机纯牛奶俩</span><span class="lead-sep">·</span><span class="lead-sub">纯牛奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">水牛奶/酸奶·酸奶</b>    <span class="dir-n">30+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">认养一头牛</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span><span class="lead-sep">、</span><span class="lead-brand">圣祥网络</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">乳制品·奶酪/奶疙瘩</b>    <span class="dir-n">11+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">手工奶疙瘩无蔗糖</span><span class="lead-sep">·</span><span class="lead-sub">奶疙瘩</span><span class="lead-sep">、</span><span class="lead-brand">认养一头牛</span><span class="lead-sep">·</span><span class="lead-sub">奶酪</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">鲜奶·纯牛奶/营养奶</b>    <span class="dir-n">183+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">蒙牛</span><span class="lead-sep">·</span><span class="lead-sub">营养奶</span><span class="lead-sep">、</span><span class="lead-brand">认养1头牛</span><span class="lead-sep">·</span><span class="lead-sub">纯牛奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">水牛奶/酸奶·酸奶/酸乳</b>    <span class="dir-n">106+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">简零控</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span><span class="lead-sep">、</span><span class="lead-brand">光明</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">驼奶/羊奶/普通奶粉·奶粉/驼奶</b>    <span class="dir-n">54+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">美可卓</span><span class="lead-sep">·</span><span class="lead-sub">奶粉</span><span class="lead-sep">、</span><span class="lead-brand">蒙牛</span><span class="lead-sep">·</span><span class="lead-sub">奶粉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">乳制品·奶酪</b>    <span class="dir-n">16+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">飞鹤</span><span class="lead-sep">·</span><span class="lead-sub">奶酪</span><span class="lead-sep">、</span><span class="lead-brand">蒙乳纪</span><span class="lead-sep">·</span><span class="lead-sub">奶酪</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">家长 · 学生</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">学生奶+营养早餐，刚需</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏家庭囤货，抖音偏学生奶</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">学生奶早餐场景，家庭装视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">学生奶+营养早餐，刚需</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">学生奶早餐场景，家庭装视频号</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#a855f7">
@@ -1139,19 +1086,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">宠物主粮·猫粮/狗粮</b>    <span class="dir-n">515+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">喵铮铮华</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span><span class="lead-sep">、</span><span class="lead-brand">卫仕</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">宠物用品·鱼缸/猫砂</b>    <span class="dir-n">501+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">喵铮铮华</span><span class="lead-sep">·</span><span class="lead-sub">鲍鱼</span><span class="lead-sep">、</span><span class="lead-brand">倍倍爱宠</span><span class="lead-sep">·</span><span class="lead-sub">宠物玩具</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">宠物零食湿粮·猫零食/宠物零食</b>    <span class="dir-n">300+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">卫仕</span><span class="lead-sep">·</span><span class="lead-sub">冻干冻干</span><span class="lead-sep">、</span><span class="lead-brand">初贝宠</span><span class="lead-sep">·</span><span class="lead-sub">猫零食罐</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">宠物主粮·猫粮/狗粮</b>    <span class="dir-n">355+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">佰萃</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span><span class="lead-sep">、</span><span class="lead-brand">卫仕</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">宠物用品·猫砂/鱼缸</b>    <span class="dir-n">554+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">多可特</span><span class="lead-sep">·</span><span class="lead-sub">宠物玩具</span><span class="lead-sep">、</span><span class="lead-brand">猫玩具益智迷宫掏</span><span class="lead-sep">·</span><span class="lead-sub">宠物玩具</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">宠物零食湿粮·猫零食/宠物零食</b>    <span class="dir-n">178+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">金故</span><span class="lead-sep">·</span><span class="lead-sub">冻干冻干</span><span class="lead-sep">、</span><span class="lead-brand">繁鱼有约</span><span class="lead-sep">·</span><span class="lead-sub">猫零食</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">养宠人群 · 年轻家庭</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">主粮+零食，复购率高</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏品质粮，抖音偏囤货大促</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">主粮做复购，零食做引流爆款</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">主粮+零食，复购率高</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">主粮做复购，零食做引流爆款</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#14b8a6">
@@ -1164,19 +1104,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">红茶·金骏眉礼</b>    <span class="dir-n">2+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">八马</span><span class="lead-sep">·</span><span class="lead-sub">金骏眉礼</span><span class="lead-sep">、</span><span class="lead-brand">茶知府品</span><span class="lead-sep">·</span><span class="lead-sub">红茶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">普洱茶·普洱/黑茶</b>    <span class="dir-n">6+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">王会长制</span><span class="lead-sep">·</span><span class="lead-sub">普洱</span><span class="lead-sep">、</span><span class="lead-brand">三鹤</span><span class="lead-sep">·</span><span class="lead-sub">黑茶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">乌龙茶·大红袍/铁观音</b>    <span class="dir-n">5+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">芯轩茶叶</span><span class="lead-sep">·</span><span class="lead-sub">铁观音</span><span class="lead-sep">、</span><span class="lead-brand">浓品感王</span><span class="lead-sep">·</span><span class="lead-sub">铁观音</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">花草养生茶·养生茶/莓茶</b>    <span class="dir-n">4+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">花锦霖茶</span><span class="lead-sep">·</span><span class="lead-sub">洛神花</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">普洱茶·普洱/黑茶</b>    <span class="dir-n">240+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">德子的茶</span><span class="lead-sep">·</span><span class="lead-sub">黑茶</span><span class="lead-sep">、</span><span class="lead-brand">李陌茶</span><span class="lead-sep">·</span><span class="lead-sub">小青柑</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">茉莉花茶·茉莉花茶</b>    <span class="dir-n">118+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">乐品乐茶</span><span class="lead-sep">·</span><span class="lead-sub">茉莉花茶</span><span class="lead-sep">、</span><span class="lead-brand">99高品质大红袍</span><span class="lead-sep">·</span><span class="lead-sub">茉莉花茶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">红茶·金骏眉/金骏眉礼</b>    <span class="dir-n">104+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">岱岩峰茶</span><span class="lead-sep">·</span><span class="lead-sub">金骏眉</span><span class="lead-sep">、</span><span class="lead-brand">万山红</span><span class="lead-sep">·</span><span class="lead-sub">金骏眉礼</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">白茶·白毫银针/白牡丹</b>    <span class="dir-n">84+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">隆兴裕</span><span class="lead-sep">·</span><span class="lead-sub">白茶</span><span class="lead-sep">、</span><span class="lead-brand">白大師</span><span class="lead-sep">·</span><span class="lead-sub">白茶</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">茶友 · 家庭（开学季弱需求）</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">茶礼+家庭自饮，开学季非核心</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏茶文化，抖音偏口粮茶</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">口粮茶抖音，茶礼视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">茶礼+家庭自饮，开学季非核心</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">口粮茶</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#3b82f6">
@@ -1189,27 +1122,20 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">蛋白粉增肌·骨胶原/蛋白粉</b>    <span class="dir-n">14+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">华北营养</span><span class="lead-sep">·</span><span class="lead-sub">骨胶原</span><span class="lead-sep">、</span><span class="lead-brand">拜迪生物</span><span class="lead-sep">·</span><span class="lead-sub">骨胶原</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">机能保健·DHA/雨生红球藻</b>    <span class="dir-n">64+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">SWIS</span><span class="lead-sep">·</span><span class="lead-sub">DHA</span><span class="lead-sep">、</span><span class="lead-brand">kasa</span><span class="lead-sep">·</span><span class="lead-sub">虾青素</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">胶原蛋白美容·胶原蛋白肽/祛斑</b>    <span class="dir-n">47+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">健康滋补</span><span class="lead-sep">·</span><span class="lead-sub">祛斑</span><span class="lead-sep">、</span><span class="lead-brand">mmV胶</span><span class="lead-sep">·</span><span class="lead-sub">胶原蛋白肽</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">维生素矿物质·维生素/叶酸</b>    <span class="dir-n">15+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">4瓶+2袋</span><span class="lead-sep">·</span><span class="lead-sub">富铁</span><span class="lead-sep">、</span><span class="lead-brand">倍安喜</span><span class="lead-sep">·</span><span class="lead-sub">叶酸</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">维生素矿物质·维生素/多维</b>    <span class="dir-n">16+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">仁养品</span><span class="lead-sep">·</span><span class="lead-sub">维生素</span><span class="lead-sep">、</span><span class="lead-brand">善存</span><span class="lead-sep">·</span><span class="lead-sub">维生素</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">机能保健·深海鱼油/鱼油</b>    <span class="dir-n">20+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">佰澳和</span><span class="lead-sep">·</span><span class="lead-sub">深海鱼油</span><span class="lead-sep">、</span><span class="lead-brand">益普利生</span><span class="lead-sep">·</span><span class="lead-sub">深海鱼油</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">蛋白粉增肌·蛋白粉/乳清蛋白</b>    <span class="dir-n">2+ 品</span>  </div>  <div class="dir-leads"></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">胶原蛋白美容·胶原蛋白</b>    <span class="dir-n">1+ 品</span>  </div>  <div class="dir-leads"></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">家长 · 学生</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">营养补充+开学增强免疫</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏信任背书，抖音偏促销走量</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">开学营养备货，信任内容视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">营养补充+开学增强免疫</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">开学营养备货，信任内容视频号</span></div>
         </div>
       </div></div>
 
-<div class="footer">鹅选开学季应季营销地图 · 轻量版 v2 · 数据：友望（视频号）+ 蝉妈妈（抖音商品榜）</div>
+<div class="footer">鹅选开学季应季营销地图 · 轻量版 v2 · 数据：友望（视频号小店）</div>
 </div>
 <div class="section-title" style="border-left-color:var(--primary)">📋 落地 SPU 拓品明细榜单 · 商家可选品清单</div>
 <div class="rk-stat-bar">
-  应季 SPU <b>10k+</b> · P0 应季重点 <b>10k+</b> · 拼多多备选 <b>19</b> · 排序: P0 优先 → 销售额降序
+  应季 SPU <b>10k+</b> · P0 应季重点 <b>10k+</b> · 排序: P0 优先 → 销售额降序
 </div>
 <div class="rk-card">
   <div class="rk-filter-bar">
@@ -1227,12 +1153,7 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         <button class="pill pill-p0" data-prio="P0">⭐ P0 应季重点</button>
         <button class="pill pill-p1" data-prio="P1">● P1 常销</button>
       </div>
-      <span class="rk-filter-lbl" style="margin-left:auto">平台</span>
-      <div class="rk-pills">
-        <button class="pill active" data-plat="all">全部</button>
-        <button class="pill pill-dian" data-plat="小店">🟢 小店</button>
-        <button class="pill pill-pdd" data-plat="拼多多">🩷 拼多多</button>
-      </div>
+      <!-- 平台筛选器已去除 · 整图聚焦视频号小店 -->
     </div>
     <div class="rk-count">显示 <b class="rk-count-n">0</b> 条 · 每页 20 条</div>
   </div>
@@ -1245,7 +1166,6 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
           <th class="th-cat">类目</th>
           <th class="th-spu">SPU · 商品名称</th>
           <th class="th-brand">品牌</th>
-          <th class="th-plat">平台</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -1264,7 +1184,7 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
   <h2 class="sheet-name">金秋季</h2>
   <span class="win">📅 9月11日 - 9月27日</span>
 </div>
-<div class="kpi-bar"><div class="kpi"><span class="kv" style="color:var(--primary)">10k+</span><span class="kl">应季商品池</span></div><div class="kpi"><span class="kv" style="color:#ff7a35">高应季浓度</span><span class="kl">P0 强应季</span></div><div class="kpi"><span class="kv" style="color:#3b5378">常销主力</span><span class="kl">P1 常销</span></div><div class="kpi"><span class="kv" style="color:#00a86b">小店主渠道</span><span class="kl">视频号+抖音合并</span></div><div class="kpi"><span class="kv" style="color:#e83e8c">拼多多补充</span><span class="kl">备选池</span></div><div class="kpi"><span class="kv" style="color:#06b6d4">5k+</span><span class="kl">独立品牌</span></div></div>
+<div class="kpi-bar"><div class="kpi"><span class="kv" style="color:var(--primary)">10k+</span><span class="kl">应季商品池</span></div><div class="kpi"><span class="kv" style="color:#ff7a35">高应季浓度</span><span class="kl">P0 强应季</span></div><div class="kpi"><span class="kv" style="color:#3b5378">常销主力</span><span class="kl">P1 常销</span></div><div class="kpi"><span class="kv" style="color:#00a86b">小店主渠道</span><span class="kl">视频号小店</span></div></div>
 <div class="section-title">三大阶段作战节奏</div>
 <div class="stage-grid">
 <div class="stage-card">
@@ -1357,19 +1277,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">米面杂粮·大米/糯米/小米</b>    <span class="dir-n">242+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">寒乡原食</span><span class="lead-sep">·</span><span class="lead-sub">大米</span><span class="lead-sep">、</span><span class="lead-brand">寒乡原</span><span class="lead-sep">·</span><span class="lead-sub">大米</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">预制菜料理包·盐焗鸡/牛肉</b>    <span class="dir-n">94+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">酱香卤猪蹄整只4</span><span class="lead-sep">·</span><span class="lead-sub">猪肉</span><span class="lead-sep">、</span><span class="lead-brand">聚客维</span><span class="lead-sep">·</span><span class="lead-sub">卤鹅</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">海鲜预制菜·海虾/海参</b>    <span class="dir-n">57+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">梦岭南滋</span><span class="lead-sep">·</span><span class="lead-sub">鲍鱼</span><span class="lead-sep">、</span><span class="lead-brand">北大西洋即食红极</span><span class="lead-sep">·</span><span class="lead-sub">海参</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">面点主食·水饺/包子</b>    <span class="dir-n">87+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">味来坊</span><span class="lead-sep">·</span><span class="lead-sub">馄饨</span><span class="lead-sep">、</span><span class="lead-brand">觅江南</span><span class="lead-sep">·</span><span class="lead-sub">馄饨</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">速食面粉·方便面/螺蛳粉</b>    <span class="dir-n">696+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">食神爱</span><span class="lead-sep">·</span><span class="lead-sub">麻辣烫</span><span class="lead-sep">、</span><span class="lead-brand">天然麦场</span><span class="lead-sep">·</span><span class="lead-sub">火鸡面</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">米面杂粮·大米/糯米/小米</b>    <span class="dir-n">385+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">寒乡原</span><span class="lead-sep">·</span><span class="lead-sub">大米</span><span class="lead-sep">、</span><span class="lead-brand">泥河湾</span><span class="lead-sep">·</span><span class="lead-sub">糯米/小米</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">调味品·调料/辣椒面</b>    <span class="dir-n">308+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">莲花</span><span class="lead-sep">·</span><span class="lead-sub">味精</span><span class="lead-sep">、</span><span class="lead-brand">薯与三讯</span><span class="lead-sep">·</span><span class="lead-sub">酱油</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">预制菜料理包·牛肉/羊肉</b>    <span class="dir-n">216+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">大希地</span><span class="lead-sep">·</span><span class="lead-sub">鸡胸</span><span class="lead-sep">、</span><span class="lead-brand">民和</span><span class="lead-sep">·</span><span class="lead-sub">鸡翅/鸡腿</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">家庭 · 团圆家宴</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">家宴食材+速食省心，刚需高频</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏家庭装，抖音偏一人食</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">家宴家庭装视频号，一人食抖音</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">家宴食材+速食省心，刚需高频</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">家宴家庭装视频号，一人食</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#10b981">
@@ -1382,19 +1295,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">海鲜水产·大闸蟹/海虾</b>    <span class="dir-n">207+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">丰馔滋补</span><span class="lead-sep">·</span><span class="lead-sub">海参</span><span class="lead-sep">、</span><span class="lead-brand">渔佃</span><span class="lead-sep">·</span><span class="lead-sub">海参</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">应季水果·柚子/苹果</b>    <span class="dir-n">521+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">里下人家</span><span class="lead-sep">·</span><span class="lead-sub">秋梨膏</span><span class="lead-sep">、</span><span class="lead-brand">狗妞1</span><span class="lead-sep">·</span><span class="lead-sub">秋月梨</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">肉禽·猪肉/牛肉</b>    <span class="dir-n">131+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">大希地</span><span class="lead-sep">·</span><span class="lead-sub">牛排</span><span class="lead-sep">、</span><span class="lead-brand">500天九华山下</span><span class="lead-sep">·</span><span class="lead-sub">鸡肉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">蔬菜·铁棍山药/南瓜</b>    <span class="dir-n">229+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">铁棍山药粉580</span><span class="lead-sep">·</span><span class="lead-sub">铁棍山药粉</span><span class="lead-sep">、</span><span class="lead-brand">正宗温县铁棍山药</span><span class="lead-sep">·</span><span class="lead-sub">铁棍山药</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">应季水果·柚子/苹果</b>    <span class="dir-n">648+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">阿子依</span><span class="lead-sep">·</span><span class="lead-sub">石榴</span><span class="lead-sep">、</span><span class="lead-brand">榴下来</span><span class="lead-sep">·</span><span class="lead-sub">石榴</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">海鲜水产·大闸蟹/海参</b>    <span class="dir-n">98+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">苏状元</span><span class="lead-sep">·</span><span class="lead-sub">大闸蟹</span><span class="lead-sep">、</span><span class="lead-brand">阳澄生活</span><span class="lead-sep">·</span><span class="lead-sub">大闸蟹</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">肉禽·鸡爪/鸡肉</b>    <span class="dir-n">58+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">三德子</span><span class="lead-sep">·</span><span class="lead-sub">鸡肉</span><span class="lead-sep">、</span><span class="lead-brand">穆小牛</span><span class="lead-sep">·</span><span class="lead-sub">牛腱子</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">蔬菜·萝卜/生姜</b>    <span class="dir-n">129+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">朱惠元</span><span class="lead-sep">·</span><span class="lead-sub">铁棍山药</span><span class="lead-sep">、</span><span class="lead-brand">贺司令</span><span class="lead-sep">·</span><span class="lead-sub">铁棍山药</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">家庭采购 · 中秋送礼客</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">秋蟹/大闸蟹时令，走亲访友礼盒心智</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏礼盒高客单，抖音偏源头鲜活</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">大闸蟹礼盒押视频号，源头鲜活走抖音</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">秋蟹/大闸蟹时令，走亲访友礼盒心智</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">大闸蟹礼盒押视频号，源头鲜活走</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#0ea5e9">
@@ -1407,19 +1313,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">维生素矿物质·维生素/钙铁锌</b>    <span class="dir-n">243+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">东方甄选</span><span class="lead-sep">·</span><span class="lead-sub">维生素</span><span class="lead-sep">、</span><span class="lead-brand">哈药HP</span><span class="lead-sep">·</span><span class="lead-sub">维生素</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">益生菌酵素·益生菌/膳食纤维</b>    <span class="dir-n">141+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">保元德益生菌粉</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span><span class="lead-sep">、</span><span class="lead-brand">华大营养</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">机能保健·叶黄素酯/DHA</b>    <span class="dir-n">89+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">哈药HP</span><span class="lead-sep">·</span><span class="lead-sub">氨糖</span><span class="lead-sep">、</span><span class="lead-brand">太太口服</span><span class="lead-sep">·</span><span class="lead-sub">口服液</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">蛋白粉增肌·蛋白粉/骨胶原</b>    <span class="dir-n">53+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">康比特</span><span class="lead-sep">·</span><span class="lead-sub">乳清蛋白</span><span class="lead-sep">、</span><span class="lead-brand">百合康B</span><span class="lead-sep">·</span><span class="lead-sub">蛋白粉</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">机能保健·麦角硫因/DHA</b>    <span class="dir-n">232+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">仁和</span><span class="lead-sep">·</span><span class="lead-sub">DHA</span><span class="lead-sep">、</span><span class="lead-brand">益节</span><span class="lead-sep">·</span><span class="lead-sub">氨糖</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">维生素矿物质·维生素/钙铁锌</b>    <span class="dir-n">282+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">钙尔奇</span><span class="lead-sep">·</span><span class="lead-sub">液体钙</span><span class="lead-sep">、</span><span class="lead-brand">芙顺堂</span><span class="lead-sep">·</span><span class="lead-sub">维生素</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">益生菌酵素·益生菌/膳食纤维</b>    <span class="dir-n">148+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">小胖瓶</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span><span class="lead-sep">、</span><span class="lead-brand">WINIY</span><span class="lead-sep">·</span><span class="lead-sub">益生菌</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">胶原蛋白美容·胶原蛋白肽/胶原蛋白</b>    <span class="dir-n">72+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">小胖瓶</span><span class="lead-sep">·</span><span class="lead-sub">胶原蛋白</span><span class="lead-sep">、</span><span class="lead-brand">美研社</span><span class="lead-sep">·</span><span class="lead-sub">胶原蛋白肽</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">健身 · 中老年</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">蛋白粉/鱼油/钙，送礼+自用</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏科普种草，抖音偏达人带货</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">功效科普做内容，达人做转化</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">蛋白粉/鱼油/钙，送礼+自用</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">功效科普做内容，达人做转化</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#ec4899">
@@ -1432,19 +1331,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">参茸贵细·人参果/人参</b>    <span class="dir-n">108+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">Chao</span><span class="lead-sep">·</span><span class="lead-sub">西洋参</span><span class="lead-sep">、</span><span class="lead-brand">福林堂西洋参片礼</span><span class="lead-sep">·</span><span class="lead-sub">西洋参礼</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">煲汤药材·黄芪/黄精</b>    <span class="dir-n">30+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">汉钰霖科</span><span class="lead-sep">·</span><span class="lead-sub">黄芪</span><span class="lead-sep">、</span><span class="lead-brand">正宗云南昭通小草</span><span class="lead-sep">·</span><span class="lead-sub">天麻</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">燕窝·燕窝</b>    <span class="dir-n">20+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">BINK</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span><span class="lead-sep">、</span><span class="lead-brand">袅烟阁慈</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">药食同源干货·山药/雪燕</b>    <span class="dir-n">22+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">弘合营养</span><span class="lead-sep">·</span><span class="lead-sub">鲜百合</span><span class="lead-sep">、</span><span class="lead-brand">福满棚福</span><span class="lead-sep">·</span><span class="lead-sub">核桃</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">枸杞·红枸杞/枸杞原浆</b>    <span class="dir-n">165+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">宁之春</span><span class="lead-sep">·</span><span class="lead-sub">枸杞原浆</span><span class="lead-sep">、</span><span class="lead-brand">纯耕</span><span class="lead-sep">·</span><span class="lead-sub">枸杞原浆</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">煲汤药材·黄芪/五味子</b>    <span class="dir-n">278+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">千草美姿</span><span class="lead-sep">·</span><span class="lead-sub">五指毛桃</span><span class="lead-sep">、</span><span class="lead-brand">秦巴兄妹</span><span class="lead-sep">·</span><span class="lead-sub">即食黄精</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">参茸贵细·西洋参/人参</b>    <span class="dir-n">183+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">浅草说</span><span class="lead-sep">·</span><span class="lead-sub">冬虫夏草</span><span class="lead-sep">、</span><span class="lead-brand">雷允上</span><span class="lead-sep">·</span><span class="lead-sub">西洋参</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">燕窝·燕窝</b>    <span class="dir-n">60+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">小仙炖</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span><span class="lead-sep">、</span><span class="lead-brand">炖太太</span><span class="lead-sep">·</span><span class="lead-sub">燕窝</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">养生 · 中秋送礼</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">燕窝/阿胶/参类，中秋送长辈</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏故事种草，抖音偏源头直播</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">中秋滋补礼盒，故事视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">燕窝/阿胶/参类，中秋送长辈</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">中秋滋补礼盒，故事视频号</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#f97316">
@@ -1457,19 +1349,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">月饼礼盒·月饼</b>    <span class="dir-n">90+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">公馆黄记</span><span class="lead-sep">·</span><span class="lead-sub">月饼</span><span class="lead-sep">、</span><span class="lead-brand">榛福记</span><span class="lead-sep">·</span><span class="lead-sub">月饼</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">坚果炒货·核桃/花生</b>    <span class="dir-n">110+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">三只松鼠</span><span class="lead-sep">·</span><span class="lead-sub">每日坚果</span><span class="lead-sep">、</span><span class="lead-brand">糯米小老</span><span class="lead-sep">·</span><span class="lead-sub">核桃</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">果干蜜饯·柿饼/葡萄干</b>    <span class="dir-n">61+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">三娃找好</span><span class="lead-sep">·</span><span class="lead-sub">桂圆干</span><span class="lead-sep">、</span><span class="lead-brand">助农乡村</span><span class="lead-sep">·</span><span class="lead-sub">桂圆干</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">糖果巧克力·巧克力/咖啡</b>    <span class="dir-n">27+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">德芙</span><span class="lead-sep">·</span><span class="lead-sub">巧克力</span><span class="lead-sep">、</span><span class="lead-brand">大白兔</span><span class="lead-sep">·</span><span class="lead-sub">糖果礼盒</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">卤味熟食·鸡爪/鸡胸</b>    <span class="dir-n">19+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">泓誉承</span><span class="lead-sep">·</span><span class="lead-sub">汤圆</span><span class="lead-sep">、</span><span class="lead-brand">脱骨侠</span><span class="lead-sep">·</span><span class="lead-sub">鸡爪</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">月饼礼盒·月饼</b>    <span class="dir-n">17+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">肴四喜</span><span class="lead-sep">·</span><span class="lead-sub">月饼</span><span class="lead-sep">、</span><span class="lead-brand">内蒙古奶皮子月饼</span><span class="lead-sep">·</span><span class="lead-sub">月饼</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">中式糕点·蛋黄酥/糕点</b>    <span class="dir-n">8+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">展艺</span><span class="lead-sep">·</span><span class="lead-sub">蛋黄酥</span><span class="lead-sep">、</span><span class="lead-brand">广选零食</span><span class="lead-sep">·</span><span class="lead-sub">蛋黄酥</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">坚果炒货·杏仁/夏威夷果</b>    <span class="dir-n">4+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">玉堂春茶</span><span class="lead-sep">·</span><span class="lead-sub">杏仁</span><span class="lead-sep">、</span><span class="lead-brand">2012年杏仁香</span><span class="lead-sep">·</span><span class="lead-sub">杏仁</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">学生 · 白领</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">月饼/糕点/坚果礼盒，走亲访友</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏礼盒，抖音偏散装零食</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">月饼礼盒视频号，散装抖音冲量</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">月饼/糕点/坚果礼盒，走亲访友</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">月饼礼盒视频号，散装</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#f59e0b">
@@ -1482,19 +1367,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">果酒预调酒·果酒</b>    <span class="dir-n">1+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">楚寨发酵</span><span class="lead-sep">·</span><span class="lead-sub">果酒</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">黄酒米酒·米酒</b>    <span class="dir-n">1+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">宜曲酒曲</span><span class="lead-sep">·</span><span class="lead-sub">米酒</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">白酒·浓香型</b>    <span class="dir-n">1+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">清热去火大麦茶原</span><span class="lead-sep">·</span><span class="lead-sub">浓香型</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">白酒·茅台/五粮液</b>    <span class="dir-n">865+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">茅台</span><span class="lead-sep">·</span><span class="lead-sub">茅台</span><span class="lead-sep">、</span><span class="lead-brand">国鼎</span><span class="lead-sep">·</span><span class="lead-sub">五粮液</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">葡萄酒·红酒/起泡酒</b>    <span class="dir-n">100+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">柏特利雅</span><span class="lead-sep">·</span><span class="lead-sub">葡萄酒</span><span class="lead-sep">、</span><span class="lead-brand">拉菲</span><span class="lead-sep">·</span><span class="lead-sub">葡萄酒</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">果酒预调酒·果酒/枸杞酒</b>    <span class="dir-n">31+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">白圣山</span><span class="lead-sep">·</span><span class="lead-sub">枸杞酒</span><span class="lead-sep">、</span><span class="lead-brand">嘉亿渊</span><span class="lead-sep">·</span><span class="lead-sub">枸杞酒礼</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">洋酒·白兰地/威士忌</b>    <span class="dir-n">26+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">LETOR POLLAR…</span><span class="lead-sep">·</span><span class="lead-sub">洋酒</span><span class="lead-sep">、</span><span class="lead-brand">卡斯贝格</span><span class="lead-sep">·</span><span class="lead-sub">白兰地</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">宴请 · 中秋送礼</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">白酒礼盒为主，团圆宴请刚需</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏酱香高端，抖音偏浓香走量</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">高端白酒礼盒优先视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">白酒礼盒为主，团圆宴请刚需</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">高端白酒礼盒优先视频号</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#06b6d4">
@@ -1507,19 +1385,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">冲调谷物·燕麦片/麦片</b>    <span class="dir-n">23+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">可士兰</span><span class="lead-sep">·</span><span class="lead-sub">燕麦</span><span class="lead-sep">、</span><span class="lead-brand">好麦多</span><span class="lead-sep">·</span><span class="lead-sub">燕麦片</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">果汁椰汁·椰子水/果汁</b>    <span class="dir-n">20+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">礼想纪100%椰</span><span class="lead-sep">·</span><span class="lead-sub">椰子水</span><span class="lead-sep">、</span><span class="lead-brand">田野说饮</span><span class="lead-sep">·</span><span class="lead-sub">果汁</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">饮用水·矿泉水/苏打水</b>    <span class="dir-n">5+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">寿乡第一</span><span class="lead-sep">·</span><span class="lead-sub">矿泉水</span><span class="lead-sep">、</span><span class="lead-brand">赞赞狗果</span><span class="lead-sep">·</span><span class="lead-sub">苏打水</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">咖啡·速溶咖啡</b>    <span class="dir-n">3+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">傣乡园玫</span><span class="lead-sep">·</span><span class="lead-sub">速溶咖啡</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">冲调谷物·燕麦片/豆浆粉</b>    <span class="dir-n">129+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">南方黑芝麻</span><span class="lead-sep">·</span><span class="lead-sub">黑芝麻糊</span><span class="lead-sep">、</span><span class="lead-brand">江中食疗</span><span class="lead-sep">·</span><span class="lead-sub">麦片</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">咖啡·速溶咖啡</b>    <span class="dir-n">102+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">火船</span><span class="lead-sep">·</span><span class="lead-sub">咖啡</span><span class="lead-sep">、</span><span class="lead-brand">四只猫</span><span class="lead-sep">·</span><span class="lead-sub">咖啡</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">果汁椰汁·果汁/椰子水</b>    <span class="dir-n">115+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">肥猫鲜森</span><span class="lead-sep">·</span><span class="lead-sub">果汁</span><span class="lead-sep">、</span><span class="lead-brand">金豆芽</span><span class="lead-sep">·</span><span class="lead-sub">柚子汁</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">饮用水·矿泉水/苏打水</b>    <span class="dir-n">68+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">美享时刻</span><span class="lead-sep">·</span><span class="lead-sub">白桦树汁</span><span class="lead-sep">、</span><span class="lead-brand">轻上</span><span class="lead-sep">·</span><span class="lead-sub">白桦树汁</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">家庭聚餐 · 走亲访友</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">团圆聚餐饮品，囤货组合心智</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏场景种草，抖音偏性价比组合</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">聚餐组合装走量，单品类做场景</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">团圆聚餐饮品，囤货组合心智</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">聚餐组合装走量，单品类做场景</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#8b5cf6">
@@ -1532,19 +1403,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">驼奶/羊奶/普通奶粉·奶粉/驼奶</b>    <span class="dir-n">21+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">渥康</span><span class="lead-sep">·</span><span class="lead-sub">奶粉</span><span class="lead-sep">、</span><span class="lead-brand">同仁堂</span><span class="lead-sep">·</span><span class="lead-sub">驼奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">鲜奶·纯牛奶</b>    <span class="dir-n">20+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">认养一头牛</span><span class="lead-sep">·</span><span class="lead-sub">纯牛奶</span><span class="lead-sep">、</span><span class="lead-brand">忠厚乳业</span><span class="lead-sep">·</span><span class="lead-sub">纯牛奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">水牛奶/酸奶·酸奶</b>    <span class="dir-n">25+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">CLASSY</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span><span class="lead-sep">、</span><span class="lead-brand">湘知运饮</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">乳制品·奶酪/奶疙瘩</b>    <span class="dir-n">9+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">皇家小虎</span><span class="lead-sep">·</span><span class="lead-sub">奶酪</span><span class="lead-sep">、</span><span class="lead-brand">多里闲食</span><span class="lead-sep">·</span><span class="lead-sub">奶疙瘩</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">鲜奶·纯牛奶/营养奶</b>    <span class="dir-n">141+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">认养1头牛</span><span class="lead-sep">·</span><span class="lead-sub">纯牛奶</span><span class="lead-sep">、</span><span class="lead-brand">金典</span><span class="lead-sep">·</span><span class="lead-sub">纯牛奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">驼奶/羊奶/普通奶粉·奶粉/驼奶</b>    <span class="dir-n">63+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">认养1头牛</span><span class="lead-sep">·</span><span class="lead-sub">奶粉</span><span class="lead-sep">、</span><span class="lead-brand">美可卓</span><span class="lead-sep">·</span><span class="lead-sub">奶粉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">水牛奶/酸奶·酸奶</b>    <span class="dir-n">93+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">光明</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span><span class="lead-sep">、</span><span class="lead-brand">认养1头牛</span><span class="lead-sep">·</span><span class="lead-sub">酸奶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">乳制品·奶酪</b>    <span class="dir-n">17+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">吾常大院</span><span class="lead-sep">·</span><span class="lead-sub">奶酪</span><span class="lead-sep">、</span><span class="lead-brand">妙可蓝多</span><span class="lead-sep">·</span><span class="lead-sub">奶酪</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">家长 · 家庭</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">常温奶/酸奶，家宴+伴手礼</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏家庭囤货，抖音偏单品爆款</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">家庭装视频号，伴手礼抖音</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">常温奶/酸奶，家宴+伴手礼</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">家庭装视频号，伴手礼</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#a855f7">
@@ -1557,19 +1421,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">猫主粮·猫粮/幼猫</b>    <span class="dir-n">413+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">萌宠摇篮</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span><span class="lead-sep">、</span><span class="lead-brand">老疯杨</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">宠物零食·猫零食/冻干猫零</b>    <span class="dir-n">368+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">泽囿</span><span class="lead-sep">·</span><span class="lead-sub">鸡肉</span><span class="lead-sep">、</span><span class="lead-brand">阿吉咪宠</span><span class="lead-sep">·</span><span class="lead-sub">猫零食</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">宠物日用品·宠物服装/鱼缸</b>    <span class="dir-n">313+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">喵铮铮华</span><span class="lead-sep">·</span><span class="lead-sub">鲍鱼</span><span class="lead-sep">、</span><span class="lead-brand">阳选</span><span class="lead-sep">·</span><span class="lead-sub">宠物服装</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">犬主粮·狗粮/幼犬</b>    <span class="dir-n">78+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">老疯杨</span><span class="lead-sep">·</span><span class="lead-sub">狗粮</span><span class="lead-sep">、</span><span class="lead-brand">营养森林</span><span class="lead-sep">·</span><span class="lead-sub">狗粮</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">猫主粮·猫粮/幼猫</b>    <span class="dir-n">303+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">尾巴生活</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span><span class="lead-sep">、</span><span class="lead-brand">宽福</span><span class="lead-sep">·</span><span class="lead-sub">猫粮</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">宠物日用品·鱼缸/宠物玩具</b>    <span class="dir-n">358+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">百宠岛</span><span class="lead-sep">·</span><span class="lead-sub">宠物玩具</span><span class="lead-sep">、</span><span class="lead-brand">普安特</span><span class="lead-sep">·</span><span class="lead-sub">驱虫</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">猫砂·猫砂</b>    <span class="dir-n">112+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">许翠花</span><span class="lead-sep">·</span><span class="lead-sub">猫砂</span><span class="lead-sep">、</span><span class="lead-brand">喵梵思</span><span class="lead-sep">·</span><span class="lead-sub">猫砂</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">宠物零食·猫零食/冻干冻干</b>    <span class="dir-n">194+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">喵梵思</span><span class="lead-sep">·</span><span class="lead-sub">鸭肉</span><span class="lead-sep">、</span><span class="lead-brand">匹卡噗</span><span class="lead-sep">·</span><span class="lead-sub">鸭肉</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">养宠人群 · 年轻家庭</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">主粮+零食，复购率高</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏品质粮，抖音偏囤货大促</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">主粮做复购，零食做引流爆款</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">主粮+零食，复购率高</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">主粮做复购，零食做引流爆款</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#14b8a6">
@@ -1582,19 +1439,12 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">白茶·白牡丹/白毫银针</b>    <span class="dir-n">6+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">白大师白</span><span class="lead-sep">·</span><span class="lead-sub">白茶</span><span class="lead-sep">、</span><span class="lead-brand">蕴芽白茶</span><span class="lead-sep">·</span><span class="lead-sub">白茶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">花草养生茶·莓茶/藤茶</b>    <span class="dir-n">4+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">精品罐装</span><span class="lead-sep">·</span><span class="lead-sub">养生茶</span><span class="lead-sep">、</span><span class="lead-brand">长寿村-</span><span class="lead-sep">·</span><span class="lead-sub">莓茶</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">普洱茶·普洱</b>    <span class="dir-n">5+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">云南勐海</span><span class="lead-sep">·</span><span class="lead-sub">普洱</span><span class="lead-sep">、</span><span class="lead-brand">双禾茶叶</span><span class="lead-sep">·</span><span class="lead-sub">普洱</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">乌龙茶·铁观音/大红袍</b>    <span class="dir-n">2+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">芯轩茶叶</span><span class="lead-sep">·</span><span class="lead-sub">铁观音</span><span class="lead-sep">、</span><span class="lead-brand">浓品感王</span><span class="lead-sep">·</span><span class="lead-sub">大红袍</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">普洱茶·普洱/黑茶</b>    <span class="dir-n">279+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">汇美茶叶</span><span class="lead-sep">·</span><span class="lead-sub">普洱</span><span class="lead-sep">、</span><span class="lead-brand">广东汇美</span><span class="lead-sep">·</span><span class="lead-sub">普洱</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">乌龙茶·大红袍/铁观音</b>    <span class="dir-n">87+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">赋祥艺</span><span class="lead-sep">·</span><span class="lead-sub">大红袍</span><span class="lead-sep">、</span><span class="lead-brand">郡望堂号</span><span class="lead-sep">·</span><span class="lead-sub">大红袍</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">绿茶·龙井/碧螺春</b>    <span class="dir-n">105+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">卢正浩</span><span class="lead-sep">·</span><span class="lead-sub">龙井</span><span class="lead-sep">、</span><span class="lead-brand">入口悦</span><span class="lead-sep">·</span><span class="lead-sub">龙井</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">茉莉花茶·茉莉花茶</b>    <span class="dir-n">86+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">百饮滋味</span><span class="lead-sep">·</span><span class="lead-sub">茉莉花茶</span><span class="lead-sep">、</span><span class="lead-brand">四川道秘</span><span class="lead-sep">·</span><span class="lead-sub">茉莉花茶</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">茶友 · 中秋送礼</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">茶礼盒/普洱/红茶，走亲访友</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏茶文化，抖音偏口粮茶</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">中秋茶礼视频号，口粮茶抖音</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">茶礼盒/普洱/红茶，走亲访友</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">中秋茶礼视频号，口粮茶</span></div>
         </div>
       </div>
       <div class="cat-card" style="--c:#3b82f6">
@@ -1607,27 +1457,20 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         </div>
         <div class="cc-channels">
           <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#07c160">📱 视频号小店</div>
             <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">蛋白粉增肌·骨胶原/电解质</b>    <span class="dir-n">11+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">华北营养</span><span class="lead-sep">·</span><span class="lead-sub">骨胶原</span><span class="lead-sep">、</span><span class="lead-brand">营养二</span><span class="lead-sep">·</span><span class="lead-sub">骨胶原</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">胶原蛋白美容·胶原蛋白肽/美颜</b>    <span class="dir-n">28+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">mmV胶</span><span class="lead-sep">·</span><span class="lead-sub">胶原蛋白肽</span><span class="lead-sep">、</span><span class="lead-brand">两个月量升级肽</span><span class="lead-sep">·</span><span class="lead-sub">胶原蛋白肽</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">机能保健·DHA/辅酶Q10</b>    <span class="dir-n">63+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">JXV海</span><span class="lead-sep">·</span><span class="lead-sub">辅酶Q10</span><span class="lead-sep">、</span><span class="lead-brand">kasa</span><span class="lead-sep">·</span><span class="lead-sub">虾青素</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#07c160">    <b class="dir-title">维生素矿物质·维生素/叶酸</b>    <span class="dir-n">7+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">倍安喜</span><span class="lead-sep">·</span><span class="lead-sub">叶酸</span></div></li></ul></div>
-          </div>
-          <div class="cc-ch">
-            <div class="cc-ch-h" style="color:#161823">🎵 抖音商品榜</div>
-            <div class="cc-spus"><ul class="dir-list"><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">机能保健·辅酶Q10/鱼油</b>    <span class="dir-n">52+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">鼎药世家</span><span class="lead-sep">·</span><span class="lead-sub">鱼油</span><span class="lead-sep">、</span><span class="lead-brand">金凯撒</span><span class="lead-sep">·</span><span class="lead-sub">深海鱼油</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">维生素矿物质·维生素/生物素</b>    <span class="dir-n">13+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">仁养品</span><span class="lead-sep">·</span><span class="lead-sub">维生素</span><span class="lead-sep">、</span><span class="lead-brand">养生堂</span><span class="lead-sep">·</span><span class="lead-sub">维生素</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">蛋白粉增肌·蛋白粉/乳清蛋白</b>    <span class="dir-n">3+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">康恩贝</span><span class="lead-sep">·</span><span class="lead-sub">蛋白粉</span></div></li><li class="dir-row">  <div class="dir-head" style="--sc:#161823">    <b class="dir-title">益生菌酵素·鸡内金</b>    <span class="dir-n">1+ 品</span>  </div>  <div class="dir-leads"><span class="lead-brand">塑存</span><span class="lead-sep">·</span><span class="lead-sub">鸡内金</span></div></li></ul></div>
           </div>
         </div>
         <div class="cc-insights">
           <div class="cc-in"><span class="in-t">👥 人群</span><span class="in-v">中老年 · 送礼</span></div>
-          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">鱼油/氨糖/滋补，中秋送长辈</span></div>
-          <div class="cc-in"><span class="in-t">⚡ 差异</span><span class="in-v">视频号偏信任背书，抖音偏促销走量</span></div>
-          <div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">中秋送长辈礼，信任内容视频号</span></div>
+          <div class="cc-in"><span class="in-t">🎯 共性</span><span class="in-v">鱼油/氨糖/滋补，中秋送长辈</span></div><div class="cc-in"><span class="in-t">💡 建议</span><span class="in-v">中秋送长辈礼，信任内容视频号</span></div>
         </div>
       </div></div>
 
-<div class="footer">鹅选金秋季应季营销地图 · 轻量版 v2 · 数据：友望（视频号）+ 蝉妈妈（抖音商品榜）</div>
+<div class="footer">鹅选金秋季应季营销地图 · 轻量版 v2 · 数据：友望（视频号小店）</div>
 
 <div class="section-title" style="border-left-color:var(--primary)">📋 落地 SPU 拓品明细榜单 · 商家可选品清单</div>
 <div class="rk-stat-bar">
-  应季 SPU <b>10k+</b> · P0 应季重点 <b>1k+</b> · 拼多多备选 <b>25</b> · 排序: P0 优先 → 销售额降序
+  应季 SPU <b>10k+</b> · P0 应季重点 <b>1k+</b> · 排序: P0 优先 → 销售额降序
 </div>
 <div class="rk-card">
   <div class="rk-filter-bar">
@@ -1645,12 +1488,7 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
         <button class="pill pill-p0" data-prio="P0">⭐ P0 应季重点</button>
         <button class="pill pill-p1" data-prio="P1">● P1 常销</button>
       </div>
-      <span class="rk-filter-lbl" style="margin-left:auto">平台</span>
-      <div class="rk-pills">
-        <button class="pill active" data-plat="all">全部</button>
-        <button class="pill pill-dian" data-plat="小店">🟢 小店</button>
-        <button class="pill pill-pdd" data-plat="拼多多">🩷 拼多多</button>
-      </div>
+      <!-- 平台筛选器已去除 · 整图聚焦视频号小店 -->
     </div>
     <div class="rk-count">显示 <b class="rk-count-n">0</b> 条 · 每页 20 条</div>
   </div>
@@ -1663,7 +1501,6 @@ body.theme-zq .cc-dim-note b { color: #7a5a2f !important; }
           <th class="th-cat">类目</th>
           <th class="th-spu">SPU · 商品名称</th>
           <th class="th-brand">品牌</th>
-          <th class="th-plat">平台</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -2243,7 +2080,7 @@ function switchSheet(id){
     const trs = filtered.slice(start, end).map((r, i) => {
       const idx = start + i + 1;
       const plats = (r.platforms || []).map(p => {
-        const cls = p === "拼多多" ? "plat-pdd" : "plat-dian";
+        const cls = "plat-dian";
         return `<span class="plat-tag ${cls}">${p}</span>`;
       }).join("");
       const ad = r.onAd ? '<span class="plat-tag plat-ad">投</span>' : "";
@@ -2256,10 +2093,9 @@ function switchSheet(id){
         <td class="td-cat">${r.cat || "-"}</td>
         <td class="td-spu" title="${spuTxt.replace(/"/g,'&quot;')}">${spuTxt}</td>
         <td class="td-brand">${r.brand || "-"}</td>
-        <td class="td-plat">${plats}${ad}</td>
-      </tr>`;
+        </tr>`;
     }).join("");
-    tbody.innerHTML = trs || '<tr><td colspan="6" style="text-align:center;padding:24px;color:#8aa3c4;">当前筛选下暂无 SPU</td></tr>';
+    tbody.innerHTML = trs || '<tr><td colspan="5" style="text-align:center;padding:24px;color:#8aa3c4;">当前筛选下暂无 SPU</td></tr>';
 
     // 计数
     const cntEl = card.querySelector(".rk-count-n");
